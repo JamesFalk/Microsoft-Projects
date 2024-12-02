@@ -1074,3 +1074,528 @@ VerticalAlignment="Top"/>
 <Ellipse x:Name="crc545_Wh" Margin="750,420,0,0" Height="12" Width="36" Stroke="Black" Fill="White" HorizontalAlignment="Left" VerticalAlignment="Top"></Ellipse>
 <Ellipse x:Name="crc555_Wh" Margin="780,410,0,0" Height="12" Width="36" Stroke="Black" Fill="White" HorizontalAlignment="Left" VerticalAlignment="Top"></Ellipse>
 <Rectangle x:Name="rctO001" Margin="405,46,0,0" Fill="Gray" Width="25" Height="20" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO002" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO003" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO004" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO005" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO006" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO007" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO008" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO009" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO010" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO011" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO012" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO013" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO014" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO015" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO016" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO017" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO018" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO019" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO020" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO021" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO022" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO023" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO024" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO025" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO026" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO027" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO028" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO029" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO030" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO031" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO032" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO033" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO034" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO035" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO036" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO037" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO038" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO039" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO040" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO041" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO042" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO043" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO044" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO045" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO046" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO047" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO048" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO049" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO050" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO051" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO052" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO053" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO054" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO055" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO056" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO057" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO058" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO059" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO060" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO061" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO062" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO063" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO064" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO065" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO066" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO067" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO068" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO069" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO070" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO071" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO072" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO073" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO074" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO075" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO076" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO077" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO078" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO079" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO080" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO081" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO082" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO083" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO084" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO085" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO086" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO087" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO088" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO089" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO090" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO091" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO092" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO093" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO094" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO095" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO096" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO097" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO098" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO099" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO100" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO101" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO102" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO103" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO104" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO105" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO106" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO107" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO108" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO109" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO110" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO111" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO112" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO113" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO114" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO115" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO116" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO117" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO118" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO119" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO120" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO121" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO122" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO123" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO124" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctO125" Margin="405,45,0,0" Fill="Gray" Width="25" Height="25" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ01" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ02" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ03" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ04" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ05" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ06" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ07" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ08" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ09" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ10" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ11" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ12" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ13" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ14" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ15" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ16" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ17" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ18" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ19" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ20" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ21" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ22" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ23" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ24" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctJ25" Margin="409,47,0,0" Fill="White" Width="17" Height="17" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI001" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI002" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top"/>
+<Rectangle x:Name="rctI003" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI004" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI005" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI006" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI007" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI008" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI009" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI010" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI011" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI012" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI013" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI014" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI015" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI016" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI017" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI018" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI019" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI020" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI021" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI022" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI023" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI024" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI025" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI026" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI027" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI028" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI029" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI030" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI031" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI032" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI033" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI034" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI035" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI036" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI037" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI038" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI039" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI040" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI041" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI042" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI043" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI044" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI045" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI046" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI047" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI048" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI049" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI050" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI051" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI052" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI053" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI054" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI055" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI056" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI057" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI058" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI059" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI060" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI061" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI062" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI063" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI064" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI065" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI066" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI067" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI068" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI069" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI070" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI071" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI072" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI073" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI074" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI075" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI076" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI077" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI078" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI079" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI080" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI081" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI082" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI083" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI084" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI085" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI086" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI087" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI088" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI089" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI090" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI091" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI092" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI093" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI094" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI095" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI096" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI097" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI098" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI099" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI100" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI101" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI102" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI103" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI104" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI105" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI106" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI107" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI108" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI109" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI110" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI111" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI112" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI113" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI114" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI115" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI116" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI117" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI118" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI119" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI120" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI121" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI122" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI123" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI124" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<Rectangle x:Name="rctI125" Margin="413,51,0,0" Fill="Black" Width="10" Height="10" Visibility="Collapsed" HorizontalAlignment="Left" Stroke="Black" VerticalAlignment="Top" />
+<RelativePanel x:Name="frColorCyc" Margin="103,145,0,0" Height="285" Width="275" BorderThickness="5" BorderBrush="Black"
+Visibility="Collapsed" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Top">
+<TextBlock x:Name="txtColorFX" Text="Color Cycler" Margin="90,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Button x:Name="btnCCL" Margin="5,235,0,0" Content="(" Width="30" BorderBrush="Black" Background="White" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+<Button x:Name="btnCCM" Margin="45,235,0,0" Content="-" Height="35" Width="30" BorderBrush="Black" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Button x:Name="btnCCP" Margin="85,235,0,0" Content="+" Height="35" Width="30" BorderBrush="Black" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Button x:Name="btnCCR" Margin="125,235,0,0" Content=")" Height="35" Width="30" BorderBrush="Black" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<TextBlock x:Name="txtColCycs" Text="1/1" Margin="163,243,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<RepeatButton x:Name="btnViewCC" Margin="200,223,0,0" FontSize="10" Height="25" Width="65" BorderBrush="Black" Background="White"
+HorizontalAlignment="Left" VerticalAlignment="Top" Click="ViewCC" ClickMode="Hover">View CC</RepeatButton>
+<Button x:Name="btnColCyc" Margin="200,248,0,0" Height="25" Width="65" BorderBrush="Black" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Button x:Name="btnRedCyc" Margin="15,20,0,0" Height="25" Width="60" BorderBrush="Black" Background="Red" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Rectangle x:Name="ellRedRedN" Fill="Red" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellRedGrnN" Fill="Green" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellRedBluN" Fill="Blue" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellRedTrqN" Fill="Turquoise" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellRedPrpN" Fill="Purple" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellRedYllN" Fill="Yellow" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellRedWhtN" Fill="White" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellRedOffN" Fill="Gray" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellRedRNDN" Fill="Black" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellRedRedO" Fill="Red" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellRedGrnO" Fill="Green" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellRedBluO" Fill="Blue" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellRedTrqO" Fill="Turquoise" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellRedPrpO" Fill="Purple" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellRedYllO" Fill="Yellow" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellRedWhtO" Fill="White" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellRedOffO" Fill="Gray" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellRedRNDO" Fill="Black" Margin="90,20,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Button x:Name="btnGrnCyc" Margin="15,45,0,0" Height="25" Width="60" BorderBrush="Black" Background="Green" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Rectangle x:Name="ellGrnRedN" Fill="Red" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellGrnGrnN" Fill="Green" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellGrnBluN" Fill="Blue" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellGrnTrqN" Fill="Turquoise" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellGrnPrpN" Fill="Purple" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellGrnYllN" Fill="Yellow" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellGrnWhtN" Fill="White" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellGrnOffN" Fill="Gray" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellGrnRNDN" Fill="Black" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellGrnRedO" Fill="Red" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellGrnGrnO" Fill="Green" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellGrnBluO" Fill="Blue" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellGrnTrqO" Fill="Turquoise" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellGrnPrpO" Fill="Purple" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellGrnYllO" Fill="Yellow" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellGrnWhtO" Fill="White" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellGrnOffO" Fill="Gray" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellGrnRNDO" Fill="Black" Margin="90,45,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Button x:Name="btnBluCyc" Margin="15,70,0,0" Height="25" Width="60" BorderBrush="Black" Background="Blue" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Rectangle x:Name="ellBluRedN" Fill="Red" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellBluGrnN" Fill="Green" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellBluBluN" Fill="Blue" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellBluTrqN" Fill="Turquoise" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellBluPrpN" Fill="Purple" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellBluYllN" Fill="Yellow" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellBluWhtN" Fill="White" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellBluOffN" Fill="Gray" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellBluRNDN" Fill="Black" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellBluRedO" Fill="Red" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellBluGrnO" Fill="Green" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellBluBluO" Fill="Blue" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellBluTrqO" Fill="Turquoise" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellBluPrpO" Fill="Purple" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellBluYllO" Fill="Yellow" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellBluWhtO" Fill="White" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellBluOffO" Fill="Gray" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellBluRNDO" Fill="Black" Margin="90,70,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Button x:Name="btnTrqCyc" Margin="15,95,0,0" Height="25" Width="60" BorderBrush="Black" Background="Turquoise" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Rectangle x:Name="ellTrqRedN" Fill="Red" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellTrqGrnN" Fill="Green" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellTrqBluN" Fill="Blue" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellTrqTrqN" Fill="Turquoise" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellTrqPrpN" Fill="Purple" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellTrqYllN" Fill="Yellow" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellTrqWhtN" Fill="White" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellTrqOffN" Fill="Gray" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellTrqRNDN" Fill="Black" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellTrqRedO" Fill="Red" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellTrqGrnO" Fill="Green" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellTrqBluO" Fill="Blue" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellTrqTrqO" Fill="Turquoise" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellTrqPrpO" Fill="Purple" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellTrqYllO" Fill="Yellow" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellTrqWhtO" Fill="White" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellTrqOffO" Fill="Gray" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellTrqRNDO" Fill="Black" Margin="90,95,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Button x:Name="btnPrpCyc" Margin="15,120,0,0" Height="25" Width="60" BorderBrush="Black" Background="Purple" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Rectangle x:Name="ellPrpRedN" Fill="Red" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellPrpGrnN" Fill="Green" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellPrpBluN" Fill="Blue" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellPrpTrqN" Fill="Turquoise" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellPrpPrpN" Fill="Purple" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellPrpYllN" Fill="Yellow" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellPrpWhtN" Fill="White" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellPrpOffN" Fill="Gray" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellPrpRNDN" Fill="Black" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellPrpRedO" Fill="Red" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellPrpGrnO" Fill="Green" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellPrpBluO" Fill="Blue" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellPrpTrqO" Fill="Turquoise" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellPrpPrpO" Fill="Purple" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellPrpYllO" Fill="Yellow" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellPrpWhtO" Fill="White" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellPrpOffO" Fill="Gray" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellPrpRNDO" Fill="Black" Margin="90,120,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Button x:Name="btnYllCyc" Margin="15,145,0,0" Height="25" Width="60" BorderBrush="Black" Background="Yellow" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Rectangle x:Name="ellYllRedN" Fill="Red" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellYllGrnN" Fill="Green" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellYllBluN" Fill="Blue" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellYllTrqN" Fill="Turquoise" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellYllPrpN" Fill="Purple" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellYllYllN" Fill="Yellow" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellYllWhtN" Fill="White" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellYllOffN" Fill="Gray" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellYllRNDN" Fill="Black" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellYllRedO" Fill="Red" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellYllGrnO" Fill="Green" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellYllBluO" Fill="Blue" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellYllTrqO" Fill="Turquoise" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellYllPrpO" Fill="Purple" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellYllYllO" Fill="Yellow" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellYllWhtO" Fill="White" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellYllOffO" Fill="Gray" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellYllRNDO" Fill="Black" Margin="90,145,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Button x:Name="btnWhtCyc" Margin="15,170,0,0" Height="25" Width="60" BorderBrush="Black" Background="White" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Rectangle x:Name="ellWhtRedN" Fill="Red" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellWhtGrnN" Fill="Green" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellWhtBluN" Fill="Blue" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellWhtTrqN" Fill="Turquoise" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellWhtPrpN" Fill="Purple" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellWhtYllN" Fill="Yellow" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellWhtWhtN" Fill="White" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellWhtOffN" Fill="Gray" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellWhtRNDN" Fill="Black" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellWhtRedO" Fill="Red" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellWhtGrnO" Fill="Green" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellWhtBluO" Fill="Blue" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellWhtTrqO" Fill="Turquoise" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellWhtPrpO" Fill="Purple" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellWhtYllO" Fill="Yellow" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellWhtWhtO" Fill="White" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellWhtOffO" Fill="Gray" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellWhtRNDO" Fill="Black" Margin="90,170,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Button x:Name="btnOffCyc" Margin="15,195,0,0" Height="25" Width="60" BorderBrush="Black" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Rectangle x:Name="ellOffRedN" Fill="Red" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellOffGrnN" Fill="Green" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellOffBluN" Fill="Blue" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellOffTrqN" Fill="Turquoise" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellOffPrpN" Fill="Purple" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellOffYllN" Fill="Yellow" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellOffWhtN" Fill="White" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellOffOffN" Fill="Gray" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Rectangle x:Name="ellOffRNDN" Fill="Black" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellOffRedO" Fill="Red" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellOffGrnO" Fill="Green" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellOffBluO" Fill="Blue" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellOffTrqO" Fill="Turquoise" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellOffPrpO" Fill="Purple" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellOffYllO" Fill="Yellow" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellOffWhtO" Fill="White" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellOffOffO" Fill="Gray" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+<Ellipse x:Name="ellOffRNDO" Fill="Black" Margin="90,195,0,0" HorizontalAlignment="Left" Width="150" VerticalAlignment="Top" Height="25" Stroke="Black"/>
+</RelativePanel>
+<RelativePanel x:Name="frTextSequencer" Margin="110,150,0,0" Height="450" Width="275" BorderThickness="5" BorderBrush="Black"
+Visibility="Collapsed" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Top">
+<TextBlock Margin="75,7,0,0" Text="TEXT Sequencer:"/>
+<Button x:Name="btnColF" Margin="5,45,0,0" Height="30" Width="20"/>
+<Button x:Name="btnColB" Margin="28,45,0,0" Height="30" Width="20"/>
+<Ellipse Margin ="50,50,0,0" Height="20" Width="100" Stroke="Black"/>
+<Ellipse x:Name="ellColor" Margin="92,42,0,0" HorizontalAlignment="Left" Width="15" VerticalAlignment="Top" Height="15" Stroke="Black"/>
+<TextBlock x:Name="tbColor" Margin="160,50,0,0" Text="Color" Height="20"/>
+<TextBlock x:Name="tbCol" Margin="225,50,0,0" Text="Red" Height="20"/>
+<Rectangle Fill="Red" Margin="97,47,0,0" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Green" Margin="72,50,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Blue" Margin="50,58,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Turquoise" Margin="72,66,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Purple" Margin="97,67,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Yellow" Margin="122,66,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="White" Margin="147,58,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="DarkGray" Margin="122,50,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="97,57,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Button x:Name="btnRefF" Margin="5,85,0,0" Height="30" Width="20"/>
+<Button x:Name="btnRefB" Margin="28,85,0,0" Height="30" Width="20"/>
+<Ellipse x:Name="ellReflect" Margin="45,92,0,0" HorizontalAlignment="Left" Width="15" VerticalAlignment="Top" Height="15" Stroke="Black"/>
+<Ellipse Margin ="50,90,0,0" HorizontalAlignment="Left" Height="20" Width="100" Stroke="Black" VerticalAlignment="Top"/>
+<TextBlock x:Name="tbReflection" Margin="160,90,0,0" Text="Reflection" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top"/>
+<TextBlock x:Name="tbRef" Margin="240,90,0,0" Text="X" Height="20"/>
+<Rectangle Fill="Black" Margin="50,98,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="147,98,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Button x:Name="btnRotF" Margin="5,125,0,0" Height="30" Width="20"/>
+<Button x:Name="btnRotB" Margin="28,125,0,0" Height="30" Width="20"/>
+<Ellipse x:Name="ellRot" Margin="92,123,0,0" HorizontalAlignment="Left" Width="15" VerticalAlignment="Top" Height="15" Stroke="Black"/>
+<Ellipse Margin ="50,130,0,0" HorizontalAlignment="Left" Height="20" Width="100" Stroke="Black" VerticalAlignment="Top"/>
+<TextBlock x:Name="tbRotation" Margin="160,130,0,0" Text="Rotation" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top"/>
+<TextBlock x:Name="tbRot" Margin="240,130,0,0" Text="0" Height="20"/>
+<Rectangle Fill="Black" Margin="97,128,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="50,138,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="97,147,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="147,138,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Button x:Name="btnThickF" Margin="5,165,0,0" Height="30" Width="20"/>
+<Button x:Name="btnThickB" Margin="28,165,0,0" Height="30" Width="20"/>
+<Ellipse x:Name="ellThick" Margin="92,163,0,0" HorizontalAlignment="Left" Width="15" VerticalAlignment="Top" Height="15" Stroke="Black"/>
+<Ellipse Margin ="50,170,0,0" HorizontalAlignment="Left" Height="20" Width="100" Stroke="Black" VerticalAlignment="Top"/>
+<TextBlock x:Name="tbThickness" Margin="160,170,0,0" Text="Thickness" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top"/>
+<TextBlock x:Name="tbThi" Margin="240,170,0,0" Text="1" Height="20"/>
+<Rectangle Fill="Black" Margin="97,168,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="59,172,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="77,186,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="117,186,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="137,172,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Button x:Name="btnPlaneF" Margin="5,205,0,0" Height="30" Width="20"/>
+<Button x:Name="btnPlaneB" Margin="28,205,0,0" Height="30" Width="20"/>
+<Ellipse x:Name="ellPlane" Margin="92,203,0,0" HorizontalAlignment="Left" Width="15" VerticalAlignment="Top" Height="15" Stroke="Black"/>
+<Ellipse Margin ="50,210,0,0" HorizontalAlignment="Left" Height="20" Width="100" Stroke="Black" VerticalAlignment="Top"/>
+<TextBlock x:Name="tbPlane" Margin="160,210,0,0" Text="Plane" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top"/>
+<TextBlock x:Name="tbPln" Margin="240,210,0,0" Text="1" Height="20"/>
+<Rectangle Fill="Black" Margin="97,208,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="63,211,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="63,224,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="97,227,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="133,224,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="133,211,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Button x:Name="btnOriF" Margin="5,245,0,0" Height="30" Width="20"/>
+<Button x:Name="btnOriB" Margin="28,245,0,0" Height="30" Width="20"/>
+<Ellipse x:Name="ellOri" Margin="92,243,0,0" HorizontalAlignment="Left" Width="15" VerticalAlignment="Top" Height="15" Stroke="Black"/>
+<Ellipse Margin ="50,250,0,0" HorizontalAlignment="Left" Height="20" Width="100" Stroke="Black" VerticalAlignment="Top"/>
+<TextBlock x:Name="tbOrientation" Margin="160,250,0,0" Text="Orientation" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top"/>
+<TextBlock x:Name="tbOri" Margin="240,250,0,0" Text="x" Height="20"/>
+<Rectangle Fill="Black" Margin="97,248,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="63,264,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Rectangle Fill="Black" Margin="133,264,0,0" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="5"/>
+<Button x:Name="btnLFrmSeq" Content="(" Margin="65,280,0,0" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="30"/>
+<Button x:Name="btnDelFrmSeq" Content="-" Margin="100,280,0,0" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="30"/>
+<Button x:Name="btnAddFrmSeq" Content="+" Margin="135,280,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnRFrmSeq" Content=")" Margin="170,280,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<TextBlock x:Name="tbFrmSeq" Margin="220,280,0,0" Text="1/1" Height="20"/>
+<Button x:Name="btnLCharSeq" Content="((" Margin="65,320,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnDelCharSeq" Content="--" Margin="100,320,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnAddCharSeq" Content="#" Margin="135,320,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnRCharSeq" Content="))" Margin="170,320,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnSetSeq" Content="O" Margin="15,300,0,0" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="35"/>
+<TextBlock x:Name="tbCharSeq" Margin="220,325,0,0" Text="1/1" Height="20"/>
+<TextBox x:Name="txtSequence" Margin="2,355,0,0" HorizontalAlignment="Left" Height="85" TextWrapping="Wrap" VerticalAlignment="Top" Width="260"
+MaxLength="30"/>
+</RelativePanel>
+<RelativePanel x:Name="frIteraField" Margin="40,150,0,0" Height="375" Width="355" BorderThickness="5" BorderBrush="Black"
+Visibility="Visible" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Top">
+<TextBlock x:Name="txtIterField" Text="Iterating Motion Fields:" Margin="85,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<TextBox x:Name="txtIField" Margin="2,20,0,0" HorizontalAlignment="Left" Height="150" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" IsReadOnly="True"/>
+<Button x:Name="btnPreCst" Margin="0,170,0,0" Content="P" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="40"/>
