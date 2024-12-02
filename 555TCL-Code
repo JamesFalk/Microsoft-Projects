@@ -1,0 +1,418 @@
+Public NotInheritable Class MainPage
+#Region "Variables, Formload, TxtDisp"
+Inherits Page
+Dim ioH, ioW, iQR, tAlNumi, LetX, LetY, elPos, SeqLoop, CCyc, CCCL(31, 2, 9), CCCi, CCCm, CCflag, LC, PreCst, MvCp As Integer
+Dim PLS, XYZ, ijk(2), LEDstate(1, 5, 5, 5, 1000), TLS(1, 5, 5, 5), EA(7), LEDColor, LColor, LEDNumber, TS, TSn, LoadFlag, WC, wlc, OwIn, OPTRRC(30, 25, 6), Emm(6),
+LSimMax(20), LSeq, LSeqf, LScrni, LScrnf(25), AF(2), AnFrames, AnTime, ScFrames(1000), ScTime(1000), Afx, AN(2), mapAN(3), LetEncode(70, 5, 5), Lcode(25, 70),
+RLCode(25), aQRP(25, 8), QRf, IFD(3), ITFD(6, 126, 126, 126) As Double
+Dim Plane, EncCol, EncFr, EncAn, AlNu(10, 7), LEC(70), EllStr, LS As String
+Dim EllArr(6), tbArr(6), rectArrI(125), rectArrJ(25), rectArrO(125) As Object : Dim elLoc, rectLocI(125), rectLocJ(25), rectLocO(125) As Thickness : Dim rn As New Random
+Private Sub LoadForm() Handles Me.Loaded
+XYZ = 1 : Plane = "X" : TS = 1 : PLS = 5 : LEDColor = 0 : LoadFlag = 0 : AF(0) = 1 : AF(1) = 1 : iQR = 1 : QRf = 0 : tAlNumi = 1
+AnTime = 1 : ScFrames(1) = 1 : TCompDisp() : OwIn = 1 : PreCst = 1 : MvCp = 0
+cbxXloop.IsChecked = 1 : cbxYloop.IsChecked = 1 : cbxZloop.IsChecked = 1 : cboOperation.SelectedIndex = 0
+For t = 0 To 1000 : For i = 1 To 5 : For j = 1 To 5 : For k = 1 To 5 : LEDstate(0, i, j, k, t) = 0 : Next : Next : Next : Next
+LScrni = 1 : LSeq = 1 : LSeqf = 1 : For i = 1 To 24 : LScrnf(i) = 1 : Next
+AlNu = {{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"},
+{"K", "L", "M", "N", "O", "P", "Q", "R", "S", "T"},
+{"U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3"},
+{"4", "5", "6", "7", "8", "9", "a", "b", "c", "d"},
+{"e", "f", "g", "h", "i", "j", "k", "l", "m", "n"},
+{"o", "p", "q", "r", "s", "t", "u", "v", "w", "x"},
+{"y", "z", "!", "#", "$", "%", "^", ".", ":", "?"}}
+Lcode =
+{{0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1}, {1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0},
+{1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1}, {1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0},
+{1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0},
+{1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1}, {1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1},
+{1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1}, {0, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0},
+{1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1}, {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1},
+{1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1}, {1, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1},
+{0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0}, {1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0},
+{0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1}, {1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1},
+{0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0}, {1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0},
+{1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0}, {1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0},
+{1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 1}, {1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1},
+{1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0}, {1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1},
+{1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1}, {0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1},
+{0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1}, {1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0},
+{1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1}, {1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0},
+{0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0}, {1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0},
+{0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0}, {0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1},
+{0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 1, 1}, {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0},
+{0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0}, {0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0},
+{0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 0}, {0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0},
+{0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0}, {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0},
+{0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0}, {0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0},
+{1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1}, {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0},
+{0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1}, {0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1},
+{0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0}, {0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0},
+{0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1}, {0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0},
+{0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 1, 0}, {0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0},
+{0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0}, {0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0},
+{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0}, {0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0},
+{0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1}, {0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1},
+{0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0}, {0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0},
+{1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1}, {1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 0, 0, 1, 1},
+{0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0},
+{0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0}, {0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0},
+{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}
+aQRP =
+{{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}, {5, 10, 15, 20, 25, 4, 9, 14, 19, 24, 3, 8, 13, 18, 23, 2, 7, 12, 17, 22, 1, 6, 11, 16, 21},
+{25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1}, {21, 16, 11, 6, 1, 22, 17, 12, 7, 2, 23, 18, 13, 8, 3, 24, 19, 14, 9, 4, 25, 20, 15, 10, 5},
+{5, 4, 3, 2, 1, 10, 9, 8, 7, 6, 15, 14, 13, 12, 11, 20, 19, 18, 17, 16, 25, 24, 23, 22, 21}, {25, 20, 15, 10, 5, 24, 19, 14, 9, 4, 23, 18, 13, 8, 3, 22, 17, 12, 7, 2, 21, 16, 11, 6, 1},
+{21, 22, 23, 24, 25, 16, 17, 18, 19, 20, 11, 12, 13, 14, 15, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5}, {1, 6, 11, 16, 21, 2, 7, 12, 17, 22, 3, 8, 13, 18, 23, 4, 9, 14, 19, 24, 5, 10, 15, 20, 25}}
+Afx = 0 : AN = {0, 0} : mapAN = {1, 1, 1}
+For x = 1 To 5 : For y = 1 To 5 : For z = 1 To 5 : MapLEDstate(x, y, z) : Next : Next : Next
+PDisp(1, 5) : scaleColors(1) : LoadFlag = 2 : GridClearer()
+For a = 0 To 20 : For b = 0 To 20 : For c = 0 To 6 : OPTRRC(a, b, c) = 1 : Next : Next : Next
+EllArr = {ellOri, ellPlane, ellThick, ellRot, ellReflect, ellColor} : Emm = {3, 6, 5, 4, 2, 9} : tbArr = {tbOri, tbPln, tbThi, tbRot, tbRef, tbCol}
+rectArrI = {
+rctI001, rctI002, rctI003, rctI004, rctI005, rctI006, rctI007, rctI008, rctI009, rctI010,
+rctI011, rctI012, rctI013, rctI014, rctI015, rctI016, rctI017, rctI018, rctI019, rctI020,
+rctI021, rctI022, rctI023, rctI024, rctI025, rctI026, rctI027, rctI028, rctI029, rctI030,
+rctI031, rctI032, rctI033, rctI034, rctI035, rctI036, rctI037, rctI038, rctI039, rctI040,
+rctI041, rctI042, rctI043, rctI044, rctI045, rctI046, rctI047, rctI048, rctI049, rctI050,
+rctI051, rctI052, rctI053, rctI054, rctI055, rctI056, rctI057, rctI058, rctI059, rctI060,
+rctI061, rctI062, rctI063, rctI064, rctI065, rctI066, rctI067, rctI068, rctI069, rctI070,
+rctI071, rctI072, rctI073, rctI074, rctI075, rctI076, rctI077, rctI078, rctI079, rctI080,
+rctI081, rctI082, rctI083, rctI084, rctI085, rctI086, rctI087, rctI088, rctI089, rctI090,
+rctI091, rctI092, rctI093, rctI094, rctI095, rctI096, rctI097, rctI098, rctI099, rctI100,
+rctI101, rctI102, rctI103, rctI104, rctI105, rctI106, rctI107, rctI108, rctI109, rctI110,
+rctI111, rctI112, rctI113, rctI114, rctI115, rctI116, rctI117, rctI118, rctI119, rctI120,
+rctI121, rctI122, rctI123, rctI124, rctI125}
+rectArrJ = {
+rctJ01, rctJ02, rctJ03, rctJ04, rctJ05, rctJ06, rctJ07, rctJ08, rctJ09, rctJ10,
+rctJ11, rctJ12, rctJ13, rctJ14, rctJ15, rctJ16, rctJ17, rctJ18, rctJ19, rctJ20,
+rctJ21, rctJ22, rctJ23, rctJ24, rctJ25}
+rectArrO = {
+rctO001, rctO002, rctO003, rctO004, rctO005, rctO006, rctO007, rctO008, rctO009, rctO010,
+rctO011, rctO012, rctO013, rctO014, rctO015, rctO016, rctO017, rctO018, rctO019, rctO020,
+rctO021, rctO022, rctO023, rctO024, rctO025, rctO026, rctO027, rctO028, rctO029, rctO030,
+rctO031, rctO032, rctO033, rctO034, rctO035, rctO036, rctO037, rctO038, rctO039, rctO040,
+rctO041, rctO042, rctO043, rctO044, rctO045, rctO046, rctO047, rctO048, rctO049, rctO050,
+rctO051, rctO052, rctO053, rctO054, rctO055, rctO056, rctO057, rctO058, rctO059, rctO060,
+rctO061, rctO062, rctO063, rctO064, rctO065, rctO066, rctO067, rctO068, rctO069, rctO070,
+rctO071, rctO072, rctO073, rctO074, rctO075, rctO076, rctO077, rctO078, rctO079, rctO080,
+rctO081, rctO082, rctO083, rctO084, rctO085, rctO086, rctO087, rctO088, rctO089, rctO090,
+rctO091, rctO092, rctO093, rctO094, rctO095, rctO096, rctO097, rctO098, rctO099, rctO100,
+rctO101, rctO102, rctO103, rctO104, rctO105, rctO106, rctO107, rctO108, rctO109, rctO110,
+rctO111, rctO112, rctO113, rctO114, rctO115, rctO116, rctO117, rctO118, rctO119, rctO120,
+rctO121, rctO122, rctO123, rctO124, rctO125}
+CCflag = 0 : CCCi = 1 : CCCm = 1 : For k = 0 To 30 : For i = 1 To 2 : For j = 1 To 9 : CCycA1(i, j) : CCCL(k, i, j) = j - 1 : Next : Next : Next
+CCycA1(1, 8) : CCycA1(2, 8) : For L = 0 To 2 : IFD(L) = 1 : Next : ITFD(0, 0, 0, 0) = 1 : ITFD(0, 1, 0, 0) = 1 : ITFD(0, 1, 1, 0) = 1
+End Sub
+Private Sub TCompDisp()
+txtPLS.Text = Plane & 6 - PLS
+AnFrames = 0 : For i = AF(0) To AF(1) : If ScFrames(i) = 0 Then : ScFrames(i) = 1 : End If
+AnFrames = AnFrames + ScFrames(i) : Next
+If TS > AF(1) Or TS <AF(0) Then : ScFrames(TS) = 0 : End If
+ScTime(TS) = Math.Round(ScFrames(TS) * AnTime / AnFrames, 3)
+txtAniDur.Text = "AnimDur:{" & AF(0) & ".." & AF(1) & "|" & AnFrames & "fr," & AnTime & "sec}"
+txtSceneDur.Text = "SceneDur:{sc" & TS & "," & ScFrames(TS) & "fr," & ScTime(TS) & "sec}"
+scaleColors(LColor)
+End Sub
+#End Region
+#Region "Plane Orienting/Shifting/Displaying"
+Private Sub btnXY_Click(sender As Object, e As RoutedEventArgs) Handles btnXY.Click
+PDisp(3, PLS)
+End Sub
+Private Sub btnXZ_Click(sender As Object, e As RoutedEventArgs) Handles btnXZ.Click
+PDisp(2, PLS)
+End Sub
+Private Sub btnYZ_Click(sender As Object, e As RoutedEventArgs) Handles btnYZ.Click
+PDisp(1, PLS)
+End Sub
+Private Sub btnPlaneUp_Click(sender As Object, e As RoutedEventArgs) Handles btnPlaneUp.Click
+If PLS < 6 Then : PLS = PLS + 1 : PDisp(XYZ, PLS) : End If
+End Sub
+Private Sub btnPlanedn_Click(sender As Object, e As RoutedEventArgs) Handles btnPlaneDn.Click
+If PLS > 0 Then : PLS = PLS - 1 : PDisp(XYZ, PLS) : End If
+End Sub
+Private Sub PDisp(ByVal PlnAxis As Integer, ByVal PlLvl As Integer)
+CubeSetter() : Select Case PlnAxis
+Case 1 : Plane = "X"
+Select Case PlLvl
+Case 1 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(500 + 10 * j + 1 * i, 1) : Next : Next
+Case 2 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(400 + 10 * j + 1 * i, 1) : Next : Next
+Case 3 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(300 + 10 * j + 1 * i, 1) : Next : Next
+Case 4 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(200 + 10 * j + 1 * i, 1) : Next : Next
+Case 5 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(100 + 10 * j + 1 * i, 1) : Next : Next
+End Select
+Case 2 : Plane = "Y"
+Select Case PlLvl
+Case 1 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(100 * j + 50 + 1 * i, 1) : Next : Next
+Case 2 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(100 * j + 40 + 1 * i, 1) : Next : Next
+Case 3 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(100 * j + 30 + 1 * i, 1) : Next : Next
+Case 4 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(100 * j + 20 + 1 * i, 1) : Next : Next
+Case 5 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(100 * j + 10 + 1 * i, 1) : Next : Next
+End Select
+Case 3 : Plane = "Z"
+Select Case PlLvl
+Case 1 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(100 * i + 10 * j + 1, 1) : Next : Next
+Case 2 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(100 * i + 10 * j + 2, 1) : Next : Next
+Case 3 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(100 * i + 10 * j + 3, 1) : Next : Next
+Case 4 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(100 * i + 10 * j + 4, 1) : Next : Next
+Case 5 : For i = 1 To 5 : For j = 1 To 5 : SetPlnLvl(100 * i + 10 * j + 5, 1) : Next : Next
+End Select
+End Select : XYZ = PlnAxis : TCompDisp()
+End Sub
+Private Sub CubeSetter()
+For i = 1 To 5 : For j = 1 To 5 : For k = 1 To 5 : SetPlnLvl(k * 1 + j * 10 + i * 100, 0) : Next : Next : Next
+End Sub
+Private Sub SetPlnLvl(ByVal L As Integer, ByVal io As Integer)
+Select Case io
+Case 0 : LedMorph(L, "UpSize")
+Case 1 : LedMorph(L, "DownSize")
+End Select
+End Sub
+#End Region
+#Region "Color Selector/Mapper Buttons"
+Private Sub btnOff_Click(sender As Object, e As RoutedEventArgs) Handles btnOff.Click
+scaleColors(0)
+End Sub
+Private Sub btnRed_Click(sender As Object, e As RoutedEventArgs) Handles btnRed.Click
+scaleColors(1)
+End Sub
+Private Sub btnGreen_Click(sender As Object, e As RoutedEventArgs) Handles btnGreen.Click
+scaleColors(2)
+End Sub
+Private Sub btnBlue_Click(sender As Object, e As RoutedEventArgs) Handles btnBlue.Click
+scaleColors(3)
+End Sub
+Private Sub btnTrquiose_Click(sender As Object, e As RoutedEventArgs) Handles btnTurquiose.Click
+scaleColors(4)
+End Sub
+Private Sub btnPurple_Click(sender As Object, e As RoutedEventArgs) Handles btnPurple.Click
+scaleColors(5)
+End Sub
+Private Sub btnYellow_Click(sender As Object, e As RoutedEventArgs) Handles btnYellow.Click
+scaleColors(6)
+End Sub
+Private Sub btnWhite_Click(sender As Object, e As RoutedEventArgs) Handles btnWhite.Click
+scaleColors(7)
+End Sub
+Private Sub scaleColors(ByVal sc As Integer)
+LEDColor = sc
+LColor = sc
+btnOff.Height = 32 : btnOff.Width = 32 : btnRed.Height = 32 : btnRed.Width = 32 : btnGreen.Height = 32 : btnGreen.Width = 32
+btnBlue.Height = 32 : btnBlue.Width = 32 : btnPurple.Height = 32 : btnPurple.Width = 32 : btnTurquiose.Height = 32 : btnTurquiose.Width = 32
+btnYellow.Height = 32 : btnYellow.Width = 32 : btnWhite.Height = 32 : btnWhite.Width = 32
+Select Case sc
+Case 0 : btnOff.Height = 40 : btnOff.Width = 40
+Case 1 : btnRed.Height = 40 : btnRed.Width = 40
+Case 2 : btnGreen.Height = 40 : btnGreen.Width = 40
+Case 3 : btnBlue.Height = 40 : btnBlue.Width = 40
+Case 4 : btnTurquiose.Height = 40 : btnTurquiose.Width = 40
+Case 5 : btnPurple.Height = 40 : btnPurple.Width = 40
+Case 6 : btnYellow.Height = 40 : btnYellow.Width = 40
+Case 7 : btnWhite.Height = 40 : btnWhite.Width = 40
+End Select
+End Sub
+Private Sub btn11_Click(sender As Object, e As RoutedEventArgs) Handles btn11.Click
+MapLEDstate(1, PLS, 1)
+End Sub
+Private Sub btn12_Click(sender As Object, e As RoutedEventArgs) Handles btn12.Click
+MapLEDstate(2, PLS, 1)
+End Sub
+Private Sub btn13_Click(sender As Object, e As RoutedEventArgs) Handles btn13.Click
+MapLEDstate(3, PLS, 1)
+End Sub
+Private Sub btn14_Click(sender As Object, e As RoutedEventArgs) Handles btn14.Click
+MapLEDstate(4, PLS, 1)
+End Sub
+Private Sub btn15_Click(sender As Object, e As RoutedEventArgs) Handles btn15.Click
+MapLEDstate(5, PLS, 1)
+End Sub
+Private Sub btn21_Click(sender As Object, e As RoutedEventArgs) Handles btn21.Click
+MapLEDstate(1, PLS, 2)
+End Sub
+Private Sub btn22_Click(sender As Object, e As RoutedEventArgs) Handles btn22.Click
+MapLEDstate(2, PLS, 2)
+End Sub
+Private Sub btn23_Click(sender As Object, e As RoutedEventArgs) Handles btn23.Click
+MapLEDstate(3, PLS, 2)
+End Sub
+Private Sub btn24_Click(sender As Object, e As RoutedEventArgs) Handles btn24.Click
+MapLEDstate(4, PLS, 2)
+End Sub
+Private Sub btn25_Click(sender As Object, e As RoutedEventArgs) Handles btn25.Click
+MapLEDstate(5, PLS, 2)
+End Sub
+Private Sub btn31_Click(sender As Object, e As RoutedEventArgs) Handles btn31.Click
+MapLEDstate(1, PLS, 3)
+End Sub
+Private Sub btn32_Click(sender As Object, e As RoutedEventArgs) Handles btn32.Click
+MapLEDstate(2, PLS, 3)
+End Sub
+Private Sub btn33_Click(sender As Object, e As RoutedEventArgs) Handles btn33.Click
+MapLEDstate(3, PLS, 3)
+End Sub
+Private Sub btn34_Click(sender As Object, e As RoutedEventArgs) Handles btn34.Click
+MapLEDstate(4, PLS, 3)
+End Sub
+Private Sub btn35_Click(sender As Object, e As RoutedEventArgs) Handles btn35.Click
+MapLEDstate(5, PLS, 3)
+End Sub
+Private Sub btn41_Click(sender As Object, e As RoutedEventArgs) Handles btn41.Click
+MapLEDstate(1, PLS, 4)
+End Sub
+Private Sub btn42_Click(sender As Object, e As RoutedEventArgs) Handles btn42.Click
+MapLEDstate(2, PLS, 4)
+End Sub
+Private Sub btn43_Click(sender As Object, e As RoutedEventArgs) Handles btn43.Click
+MapLEDstate(3, PLS, 4)
+End Sub
+Private Sub btn44_Click(sender As Object, e As RoutedEventArgs) Handles btn44.Click
+MapLEDstate(4, PLS, 4)
+End Sub
+Private Sub btn45_Click(sender As Object, e As RoutedEventArgs) Handles btn45.Click
+MapLEDstate(5, PLS, 4)
+End Sub
+Private Sub btn51_Click(sender As Object, e As RoutedEventArgs) Handles btn51.Click
+MapLEDstate(1, PLS, 5)
+End Sub
+Private Sub btn52_Click(sender As Object, e As RoutedEventArgs) Handles btn52.Click
+MapLEDstate(2, PLS, 5)
+End Sub
+Private Sub btn53_Click(sender As Object, e As RoutedEventArgs) Handles btn53.Click
+MapLEDstate(3, PLS, 5)
+End Sub
+Private Sub btn54_Click(sender As Object, e As RoutedEventArgs) Handles btn54.Click
+MapLEDstate(4, PLS, 5)
+End Sub
+Private Sub btn55_Click(sender As Object, e As RoutedEventArgs) Handles btn55.Click
+MapLEDstate(5, PLS, 5)
+End Sub
+#End Region
+#Region "Map/Display/Morph Functions"
+Public Sub MapLEDstate(ByVal X, ByVal Y, ByVal Z)
+Try : Select Case LoadFlag
+Case = 0 : Select Case XYZ
+Case = 1 : ijk(0) = 6 - Y : ijk(1) = Z : ijk(2) = 6 - X 'YZ Plane
+Case = 2 : ijk(0) = X : ijk(1) = Z : ijk(2) = Y 'XZ Plane
+Case = 3 : ijk(0) = X : ijk(1) = Y : ijk(2) = Z 'XY Plane
+End Select : LEDNumber = 100 * ijk(0) + 1 * ijk(1) + 10 * (6 - ijk(2))
+LEDstate(0, ijk(0), ijk(1), ijk(2), TS) = LEDColor : LEDstate(1, ijk(0), ijk(1), ijk(2), TS) = LEDNumber
+Case = 1 : LEDColor = LEDstate(0, X, Y, Z, TS) : LEDNumber = LEDstate(1, X, Y, Z, TS) : End Select
+LEDdisplayer(LEDNumber, LEDColor) : LoadFlag = 0 : Catch : End Try
+End Sub
+Private Sub LEDdisplayer(ByVal EN As Integer, ByVal EC As Integer)
+For i As Integer = 0 To 7 : EA(i) = 0 : Next : EA(EC) = 1 : LedMorph(EN, "Color Shift")
+End Sub
+Private Sub LedMorph(ByVal L As Integer, ByVal Morph As String)
+Select Case L
+Case 111 : ledmorphB(crc111_oo, crc111_Rd, crc111_Gr, crc111_Bl, crc111_Yw, crc111_Pu, crc111_Tq, crc111_Wh, Morph)
+Case 112 : ledmorphB(crc112_oo, crc112_Rd, crc112_Gr, crc112_Bl, crc112_Yw, crc112_Pu, crc112_Tq, crc112_Wh, Morph)
+Case 113 : ledmorphB(crc113_oo, crc113_Rd, crc113_Gr, crc113_Bl, crc113_Yw, crc113_Pu, crc113_Tq, crc113_Wh, Morph)
+Case 114 : ledmorphB(crc114_oo, crc114_Rd, crc114_Gr, crc114_Bl, crc114_Yw, crc114_Pu, crc114_Tq, crc114_Wh, Morph)
+Case 115 : ledmorphB(crc115_oo, crc115_Rd, crc115_Gr, crc115_Bl, crc115_Yw, crc115_Pu, crc115_Tq, crc115_Wh, Morph)
+Case 121 : ledmorphB(crc121_oo, crc121_Rd, crc121_Gr, crc121_Bl, crc121_Yw, crc121_Pu, crc121_Tq, crc121_Wh, Morph)
+Case 122 : ledmorphB(crc122_oo, crc122_Rd, crc122_Gr, crc122_Bl, crc122_Yw, crc122_Pu, crc122_Tq, crc122_Wh, Morph)
+Case 123 : ledmorphB(crc123_oo, crc123_Rd, crc123_Gr, crc123_Bl, crc123_Yw, crc123_Pu, crc123_Tq, crc123_Wh, Morph)
+Case 124 : ledmorphB(crc124_oo, crc124_Rd, crc124_Gr, crc124_Bl, crc124_Yw, crc124_Pu, crc124_Tq, crc124_Wh, Morph)
+Case 125 : ledmorphB(crc125_oo, crc125_Rd, crc125_Gr, crc125_Bl, crc125_Yw, crc125_Pu, crc125_Tq, crc125_Wh, Morph)
+Case 131 : ledmorphB(crc131_oo, crc131_Rd, crc131_Gr, crc131_Bl, crc131_Yw, crc131_Pu, crc131_Tq, crc131_Wh, Morph)
+Case 132 : ledmorphB(crc132_oo, crc132_Rd, crc132_Gr, crc132_Bl, crc132_Yw, crc132_Pu, crc132_Tq, crc132_Wh, Morph)
+Case 133 : ledmorphB(crc133_oo, crc133_Rd, crc133_Gr, crc133_Bl, crc133_Yw, crc133_Pu, crc133_Tq, crc133_Wh, Morph)
+Case 134 : ledmorphB(crc134_oo, crc134_Rd, crc134_Gr, crc134_Bl, crc134_Yw, crc134_Pu, crc134_Tq, crc134_Wh, Morph)
+Case 135 : ledmorphB(crc135_oo, crc135_Rd, crc135_Gr, crc135_Bl, crc135_Yw, crc135_Pu, crc135_Tq, crc135_Wh, Morph)
+Case 141 : ledmorphB(crc141_oo, crc141_Rd, crc141_Gr, crc141_Bl, crc141_Yw, crc141_Pu, crc141_Tq, crc141_Wh, Morph)
+Case 142 : ledmorphB(crc142_oo, crc142_Rd, crc142_Gr, crc142_Bl, crc142_Yw, crc142_Pu, crc142_Tq, crc142_Wh, Morph)
+Case 143 : ledmorphB(crc143_oo, crc143_Rd, crc143_Gr, crc143_Bl, crc143_Yw, crc143_Pu, crc143_Tq, crc143_Wh, Morph)
+Case 144 : ledmorphB(crc144_oo, crc144_Rd, crc144_Gr, crc144_Bl, crc144_Yw, crc144_Pu, crc144_Tq, crc144_Wh, Morph)
+Case 145 : ledmorphB(crc145_oo, crc145_Rd, crc145_Gr, crc145_Bl, crc145_Yw, crc145_Pu, crc145_Tq, crc145_Wh, Morph)
+Case 151 : ledmorphB(crc151_oo, crc151_Rd, crc151_Gr, crc151_Bl, crc151_Yw, crc151_Pu, crc151_Tq, crc151_Wh, Morph)
+Case 152 : ledmorphB(crc152_oo, crc152_Rd, crc152_Gr, crc152_Bl, crc152_Yw, crc152_Pu, crc152_Tq, crc152_Wh, Morph)
+Case 153 : ledmorphB(crc153_oo, crc153_Rd, crc153_Gr, crc153_Bl, crc153_Yw, crc153_Pu, crc153_Tq, crc153_Wh, Morph)
+Case 154 : ledmorphB(crc154_oo, crc154_Rd, crc154_Gr, crc154_Bl, crc154_Yw, crc154_Pu, crc154_Tq, crc154_Wh, Morph)
+Case 155 : ledmorphB(crc155_oo, crc155_Rd, crc155_Gr, crc155_Bl, crc155_Yw, crc155_Pu, crc155_Tq, crc155_Wh, Morph)
+Case 211 : ledmorphB(crc211_oo, crc211_Rd, crc211_Gr, crc211_Bl, crc211_Yw, crc211_Pu, crc211_Tq, crc211_Wh, Morph)
+Case 212 : ledmorphB(crc212_oo, crc212_Rd, crc212_Gr, crc212_Bl, crc212_Yw, crc212_Pu, crc212_Tq, crc212_Wh, Morph)
+Case 213 : ledmorphB(crc213_oo, crc213_Rd, crc213_Gr, crc213_Bl, crc213_Yw, crc213_Pu, crc213_Tq, crc213_Wh, Morph)
+Case 214 : ledmorphB(crc214_oo, crc214_Rd, crc214_Gr, crc214_Bl, crc214_Yw, crc214_Pu, crc214_Tq, crc214_Wh, Morph)
+Case 215 : ledmorphB(crc215_oo, crc215_Rd, crc215_Gr, crc215_Bl, crc215_Yw, crc215_Pu, crc215_Tq, crc215_Wh, Morph)
+Case 221 : ledmorphB(crc221_oo, crc221_Rd, crc221_Gr, crc221_Bl, crc221_Yw, crc221_Pu, crc221_Tq, crc221_Wh, Morph)
+Case 222 : ledmorphB(crc222_oo, crc222_Rd, crc222_Gr, crc222_Bl, crc222_Yw, crc222_Pu, crc222_Tq, crc222_Wh, Morph)
+Case 223 : ledmorphB(crc223_oo, crc223_Rd, crc223_Gr, crc223_Bl, crc223_Yw, crc223_Pu, crc223_Tq, crc223_Wh, Morph)
+Case 224 : ledmorphB(crc224_oo, crc224_Rd, crc224_Gr, crc224_Bl, crc224_Yw, crc224_Pu, crc224_Tq, crc224_Wh, Morph)
+Case 225 : ledmorphB(crc225_oo, crc225_Rd, crc225_Gr, crc225_Bl, crc225_Yw, crc225_Pu, crc225_Tq, crc225_Wh, Morph)
+Case 231 : ledmorphB(crc231_oo, crc231_Rd, crc231_Gr, crc231_Bl, crc231_Yw, crc231_Pu, crc231_Tq, crc231_Wh, Morph)
+Case 232 : ledmorphB(crc232_oo, crc232_Rd, crc232_Gr, crc232_Bl, crc232_Yw, crc232_Pu, crc232_Tq, crc232_Wh, Morph)
+Case 233 : ledmorphB(crc233_oo, crc233_Rd, crc233_Gr, crc233_Bl, crc233_Yw, crc233_Pu, crc233_Tq, crc233_Wh, Morph)
+Case 234 : ledmorphB(crc234_oo, crc234_Rd, crc234_Gr, crc234_Bl, crc234_Yw, crc234_Pu, crc234_Tq, crc234_Wh, Morph)
+Case 235 : ledmorphB(crc235_oo, crc235_Rd, crc235_Gr, crc235_Bl, crc235_Yw, crc235_Pu, crc235_Tq, crc235_Wh, Morph)
+Case 241 : ledmorphB(crc241_oo, crc241_Rd, crc241_Gr, crc241_Bl, crc241_Yw, crc241_Pu, crc241_Tq, crc241_Wh, Morph)
+Case 242 : ledmorphB(crc242_oo, crc242_Rd, crc242_Gr, crc242_Bl, crc242_Yw, crc242_Pu, crc242_Tq, crc242_Wh, Morph)
+Case 243 : ledmorphB(crc243_oo, crc243_Rd, crc243_Gr, crc243_Bl, crc243_Yw, crc243_Pu, crc243_Tq, crc243_Wh, Morph)
+Case 244 : ledmorphB(crc244_oo, crc244_Rd, crc244_Gr, crc244_Bl, crc244_Yw, crc244_Pu, crc244_Tq, crc244_Wh, Morph)
+Case 245 : ledmorphB(crc245_oo, crc245_Rd, crc245_Gr, crc245_Bl, crc245_Yw, crc245_Pu, crc245_Tq, crc245_Wh, Morph)
+Case 251 : ledmorphB(crc251_oo, crc251_Rd, crc251_Gr, crc251_Bl, crc251_Yw, crc251_Pu, crc251_Tq, crc251_Wh, Morph)
+Case 252 : ledmorphB(crc252_oo, crc252_Rd, crc252_Gr, crc252_Bl, crc252_Yw, crc252_Pu, crc252_Tq, crc252_Wh, Morph)
+Case 253 : ledmorphB(crc253_oo, crc253_Rd, crc253_Gr, crc253_Bl, crc253_Yw, crc253_Pu, crc253_Tq, crc253_Wh, Morph)
+Case 254 : ledmorphB(crc254_oo, crc254_Rd, crc254_Gr, crc254_Bl, crc254_Yw, crc254_Pu, crc254_Tq, crc254_Wh, Morph)
+Case 255 : ledmorphB(crc255_oo, crc255_Rd, crc255_Gr, crc255_Bl, crc255_Yw, crc255_Pu, crc255_Tq, crc255_Wh, Morph)
+Case 311 : ledmorphB(crc311_oo, crc311_Rd, crc311_Gr, crc311_Bl, crc311_Yw, crc311_Pu, crc311_Tq, crc311_Wh, Morph)
+Case 312 : ledmorphB(crc312_oo, crc312_Rd, crc312_Gr, crc312_Bl, crc312_Yw, crc312_Pu, crc312_Tq, crc312_Wh, Morph)
+Case 313 : ledmorphB(crc313_oo, crc313_Rd, crc313_Gr, crc313_Bl, crc313_Yw, crc313_Pu, crc313_Tq, crc313_Wh, Morph)
+Case 314 : ledmorphB(crc314_oo, crc314_Rd, crc314_Gr, crc314_Bl, crc314_Yw, crc314_Pu, crc314_Tq, crc314_Wh, Morph)
+Case 315 : ledmorphB(crc315_oo, crc315_Rd, crc315_Gr, crc315_Bl, crc315_Yw, crc315_Pu, crc315_Tq, crc315_Wh, Morph)
+Case 321 : ledmorphB(crc321_oo, crc321_Rd, crc321_Gr, crc321_Bl, crc321_Yw, crc321_Pu, crc321_Tq, crc321_Wh, Morph)
+Case 322 : ledmorphB(crc322_oo, crc322_Rd, crc322_Gr, crc322_Bl, crc322_Yw, crc322_Pu, crc322_Tq, crc322_Wh, Morph)
+Case 323 : ledmorphB(crc323_oo, crc323_Rd, crc323_Gr, crc323_Bl, crc323_Yw, crc323_Pu, crc323_Tq, crc323_Wh, Morph)
+Case 324 : ledmorphB(crc324_oo, crc324_Rd, crc324_Gr, crc324_Bl, crc324_Yw, crc324_Pu, crc324_Tq, crc324_Wh, Morph)
+Case 325 : ledmorphB(crc325_oo, crc325_Rd, crc325_Gr, crc325_Bl, crc325_Yw, crc325_Pu, crc325_Tq, crc325_Wh, Morph)
+Case 331 : ledmorphB(crc331_oo, crc331_Rd, crc331_Gr, crc331_Bl, crc331_Yw, crc331_Pu, crc331_Tq, crc331_Wh, Morph)
+Case 332 : ledmorphB(crc332_oo, crc332_Rd, crc332_Gr, crc332_Bl, crc332_Yw, crc332_Pu, crc332_Tq, crc332_Wh, Morph)
+Case 333 : ledmorphB(crc333_oo, crc333_Rd, crc333_Gr, crc333_Bl, crc333_Yw, crc333_Pu, crc333_Tq, crc333_Wh, Morph)
+Case 334 : ledmorphB(crc334_oo, crc334_Rd, crc334_Gr, crc334_Bl, crc334_Yw, crc334_Pu, crc334_Tq, crc334_Wh, Morph)
+Case 335 : ledmorphB(crc335_oo, crc335_Rd, crc335_Gr, crc335_Bl, crc335_Yw, crc335_Pu, crc335_Tq, crc335_Wh, Morph)
+Case 341 : ledmorphB(crc341_oo, crc341_Rd, crc341_Gr, crc341_Bl, crc341_Yw, crc341_Pu, crc341_Tq, crc341_Wh, Morph)
+Case 342 : ledmorphB(crc342_oo, crc342_Rd, crc342_Gr, crc342_Bl, crc342_Yw, crc342_Pu, crc342_Tq, crc342_Wh, Morph)
+Case 343 : ledmorphB(crc343_oo, crc343_Rd, crc343_Gr, crc343_Bl, crc343_Yw, crc343_Pu, crc343_Tq, crc343_Wh, Morph)
+Case 344 : ledmorphB(crc344_oo, crc344_Rd, crc344_Gr, crc344_Bl, crc344_Yw, crc344_Pu, crc344_Tq, crc344_Wh, Morph)
+Case 345 : ledmorphB(crc345_oo, crc345_Rd, crc345_Gr, crc345_Bl, crc345_Yw, crc345_Pu, crc345_Tq, crc345_Wh, Morph)
+Case 351 : ledmorphB(crc351_oo, crc351_Rd, crc351_Gr, crc351_Bl, crc351_Yw, crc351_Pu, crc351_Tq, crc351_Wh, Morph)
+Case 352 : ledmorphB(crc352_oo, crc352_Rd, crc352_Gr, crc352_Bl, crc352_Yw, crc352_Pu, crc352_Tq, crc352_Wh, Morph)
+Case 353 : ledmorphB(crc353_oo, crc353_Rd, crc353_Gr, crc353_Bl, crc353_Yw, crc353_Pu, crc353_Tq, crc353_Wh, Morph)
+Case 354 : ledmorphB(crc354_oo, crc354_Rd, crc354_Gr, crc354_Bl, crc354_Yw, crc354_Pu, crc354_Tq, crc354_Wh, Morph)
+Case 355 : ledmorphB(crc355_oo, crc355_Rd, crc355_Gr, crc355_Bl, crc355_Yw, crc355_Pu, crc355_Tq, crc355_Wh, Morph)
+Case 411 : ledmorphB(crc411_oo, crc411_Rd, crc411_Gr, crc411_Bl, crc411_Yw, crc411_Pu, crc411_Tq, crc411_Wh, Morph)
+Case 412 : ledmorphB(crc412_oo, crc412_Rd, crc412_Gr, crc412_Bl, crc412_Yw, crc412_Pu, crc412_Tq, crc412_Wh, Morph)
+Case 413 : ledmorphB(crc413_oo, crc413_Rd, crc413_Gr, crc413_Bl, crc413_Yw, crc413_Pu, crc413_Tq, crc413_Wh, Morph)
+Case 414 : ledmorphB(crc414_oo, crc414_Rd, crc414_Gr, crc414_Bl, crc414_Yw, crc414_Pu, crc414_Tq, crc414_Wh, Morph)
+Case 415 : ledmorphB(crc415_oo, crc415_Rd, crc415_Gr, crc415_Bl, crc415_Yw, crc415_Pu, crc415_Tq, crc415_Wh, Morph)
+Case 421 : ledmorphB(crc421_oo, crc421_Rd, crc421_Gr, crc421_Bl, crc421_Yw, crc421_Pu, crc421_Tq, crc421_Wh, Morph)
+Case 422 : ledmorphB(crc422_oo, crc422_Rd, crc422_Gr, crc422_Bl, crc422_Yw, crc422_Pu, crc422_Tq, crc422_Wh, Morph)
+Case 423 : ledmorphB(crc423_oo, crc423_Rd, crc423_Gr, crc423_Bl, crc423_Yw, crc423_Pu, crc423_Tq, crc423_Wh, Morph)
+Case 424 : ledmorphB(crc424_oo, crc424_Rd, crc424_Gr, crc424_Bl, crc424_Yw, crc424_Pu, crc424_Tq, crc424_Wh, Morph)
+Case 425 : ledmorphB(crc425_oo, crc425_Rd, crc425_Gr, crc425_Bl, crc425_Yw, crc425_Pu, crc425_Tq, crc425_Wh, Morph)
+Case 431 : ledmorphB(crc431_oo, crc431_Rd, crc431_Gr, crc431_Bl, crc431_Yw, crc431_Pu, crc431_Tq, crc431_Wh, Morph)
+Case 432 : ledmorphB(crc432_oo, crc432_Rd, crc432_Gr, crc432_Bl, crc432_Yw, crc432_Pu, crc432_Tq, crc432_Wh, Morph)
+Case 433 : ledmorphB(crc433_oo, crc433_Rd, crc433_Gr, crc433_Bl, crc433_Yw, crc433_Pu, crc433_Tq, crc433_Wh, Morph)
+Case 434 : ledmorphB(crc434_oo, crc434_Rd, crc434_Gr, crc434_Bl, crc434_Yw, crc434_Pu, crc434_Tq, crc434_Wh, Morph)
+Case 435 : ledmorphB(crc435_oo, crc435_Rd, crc435_Gr, crc435_Bl, crc435_Yw, crc435_Pu, crc435_Tq, crc435_Wh, Morph)
+Case 441 : ledmorphB(crc441_oo, crc441_Rd, crc441_Gr, crc441_Bl, crc441_Yw, crc441_Pu, crc441_Tq, crc441_Wh, Morph)
+Case 442 : ledmorphB(crc442_oo, crc442_Rd, crc442_Gr, crc442_Bl, crc442_Yw, crc442_Pu, crc442_Tq, crc442_Wh, Morph)
+Case 443 : ledmorphB(crc443_oo, crc443_Rd, crc443_Gr, crc443_Bl, crc443_Yw, crc443_Pu, crc443_Tq, crc443_Wh, Morph)
+Case 444 : ledmorphB(crc444_oo, crc444_Rd, crc444_Gr, crc444_Bl, crc444_Yw, crc444_Pu, crc444_Tq, crc444_Wh, Morph)
+Case 445 : ledmorphB(crc445_oo, crc445_Rd, crc445_Gr, crc445_Bl, crc445_Yw, crc445_Pu, crc445_Tq, crc445_Wh, Morph)
+Case 451 : ledmorphB(crc451_oo, crc451_Rd, crc451_Gr, crc451_Bl, crc451_Yw, crc451_Pu, crc451_Tq, crc451_Wh, Morph)
+Case 452 : ledmorphB(crc452_oo, crc452_Rd, crc452_Gr, crc452_Bl, crc452_Yw, crc452_Pu, crc452_Tq, crc452_Wh, Morph)
+Case 453 : ledmorphB(crc453_oo, crc453_Rd, crc453_Gr, crc453_Bl, crc453_Yw, crc453_Pu, crc453_Tq, crc453_Wh, Morph)
+Case 454 : ledmorphB(crc454_oo, crc454_Rd, crc454_Gr, crc454_Bl, crc454_Yw, crc454_Pu, crc454_Tq, crc454_Wh, Morph)
+Case 455 : ledmorphB(crc455_oo, crc455_Rd, crc455_Gr, crc455_Bl, crc455_Yw, crc455_Pu, crc455_Tq, crc455_Wh, Morph)
+Case 511 : ledmorphB(crc511_oo, crc511_Rd, crc511_Gr, crc511_Bl, crc511_Yw, crc511_Pu, crc511_Tq, crc511_Wh, Morph)
+Case 512 : ledmorphB(crc512_oo, crc512_Rd, crc512_Gr, crc512_Bl, crc512_Yw, crc512_Pu, crc512_Tq, crc512_Wh, Morph)
+Case 513 : ledmorphB(crc513_oo, crc513_Rd, crc513_Gr, crc513_Bl, crc513_Yw, crc513_Pu, crc513_Tq, crc513_Wh, Morph)
+Case 514 : ledmorphB(crc514_oo, crc514_Rd, crc514_Gr, crc514_Bl, crc514_Yw, crc514_Pu, crc514_Tq, crc514_Wh, Morph)
+Case 515 : ledmorphB(crc515_oo, crc515_Rd, crc515_Gr, crc515_Bl, crc515_Yw, crc515_Pu, crc515_Tq, crc515_Wh, Morph)
+Case 521 : ledmorphB(crc521_oo, crc521_Rd, crc521_Gr, crc521_Bl, crc521_Yw, crc521_Pu, crc521_Tq, crc521_Wh, Morph)
+Case 522 : ledmorphB(crc522_oo, crc522_Rd, crc522_Gr, crc522_Bl, crc522_Yw, crc522_Pu, crc522_Tq, crc522_Wh, Morph)
+Case 523 : ledmorphB(crc523_oo, crc523_Rd, crc523_Gr, crc523_Bl, crc523_Yw, crc523_Pu, crc523_Tq, crc523_Wh, Morph)
+Case 524 : ledmorphB(crc524_oo, crc524_Rd, crc524_Gr, crc524_Bl, crc524_Yw, crc524_Pu, crc524_Tq, crc524_Wh, Morph)
+Case 525 : ledmorphB(crc525_oo, crc525_Rd, crc525_Gr, crc525_Bl, crc525_Yw, crc525_Pu, crc525_Tq, crc525_Wh, Morph)
+Case 531 : ledmorphB(crc531_oo, crc531_Rd, crc531_Gr, crc531_Bl, crc531_Yw, crc531_Pu, crc531_Tq, crc531_Wh, Morph)
+Case 532 : ledmorphB(crc532_oo, crc532_Rd, crc532_Gr, crc532_Bl, crc532_Yw, crc532_Pu, crc532_Tq, crc532_Wh, Morph)
+Case 533 : ledmorphB(crc533_oo, crc533_Rd, crc533_Gr, crc533_Bl, crc533_Yw, crc533_Pu, crc533_Tq, crc533_Wh, Morph)
+Case 534 : ledmorphB(crc534_oo, crc534_Rd, crc534_Gr, crc534_Bl, crc534_Yw, crc534_Pu, crc534_Tq, crc534_Wh, Morph)
