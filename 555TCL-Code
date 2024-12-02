@@ -416,3 +416,670 @@ Case 531 : ledmorphB(crc531_oo, crc531_Rd, crc531_Gr, crc531_Bl, crc531_Yw, crc5
 Case 532 : ledmorphB(crc532_oo, crc532_Rd, crc532_Gr, crc532_Bl, crc532_Yw, crc532_Pu, crc532_Tq, crc532_Wh, Morph)
 Case 533 : ledmorphB(crc533_oo, crc533_Rd, crc533_Gr, crc533_Bl, crc533_Yw, crc533_Pu, crc533_Tq, crc533_Wh, Morph)
 Case 534 : ledmorphB(crc534_oo, crc534_Rd, crc534_Gr, crc534_Bl, crc534_Yw, crc534_Pu, crc534_Tq, crc534_Wh, Morph)
+Case 535 : ledmorphB(crc535_oo, crc535_Rd, crc535_Gr, crc535_Bl, crc535_Yw, crc535_Pu, crc535_Tq, crc535_Wh, Morph)
+Case 541 : ledmorphB(crc541_oo, crc541_Rd, crc541_Gr, crc541_Bl, crc541_Yw, crc541_Pu, crc541_Tq, crc541_Wh, Morph)
+Case 542 : ledmorphB(crc542_oo, crc542_Rd, crc542_Gr, crc542_Bl, crc542_Yw, crc542_Pu, crc542_Tq, crc542_Wh, Morph)
+Case 543 : ledmorphB(crc543_oo, crc543_Rd, crc543_Gr, crc543_Bl, crc543_Yw, crc543_Pu, crc543_Tq, crc543_Wh, Morph)
+Case 544 : ledmorphB(crc544_oo, crc544_Rd, crc544_Gr, crc544_Bl, crc544_Yw, crc544_Pu, crc544_Tq, crc544_Wh, Morph)
+Case 545 : ledmorphB(crc545_oo, crc545_Rd, crc545_Gr, crc545_Bl, crc545_Yw, crc545_Pu, crc545_Tq, crc545_Wh, Morph)
+Case 551 : ledmorphB(crc551_oo, crc551_Rd, crc551_Gr, crc551_Bl, crc551_Yw, crc551_Pu, crc551_Tq, crc551_Wh, Morph)
+Case 552 : ledmorphB(crc552_oo, crc552_Rd, crc552_Gr, crc552_Bl, crc552_Yw, crc552_Pu, crc552_Tq, crc552_Wh, Morph)
+Case 553 : ledmorphB(crc553_oo, crc553_Rd, crc553_Gr, crc553_Bl, crc553_Yw, crc553_Pu, crc553_Tq, crc553_Wh, Morph)
+Case 554 : ledmorphB(crc554_oo, crc554_Rd, crc554_Gr, crc554_Bl, crc554_Yw, crc554_Pu, crc554_Tq, crc554_Wh, Morph)
+Case 555 : ledmorphB(crc555_oo, crc555_Rd, crc555_Gr, crc555_Bl, crc555_Yw, crc555_Pu, crc555_Tq, crc555_Wh, Morph)
+End Select
+End Sub
+Private Sub ledmorphB(ByVal O_oo As Object, ByVal O_Rd As Object, ByVal O_Gr As Object, ByVal O_Bl As Object,
+ByVal O_Yw As Object, ByVal O_Pu As Object, ByVal O_Tq As Object, ByVal O_Wh As Object, ByVal Morph As String)
+Select Case Morph
+Case = "Color Shift"
+O_oo.Opacity = EA(0) : O_Rd.Opacity = EA(1) : O_Gr.Opacity = EA(2) : O_Bl.Opacity = EA(3)
+O_Tq.Opacity = EA(4) : O_Pu.Opacity = EA(5) : O_Yw.Opacity = EA(6) : O_Wh.Opacity = EA(7)
+Case = "DownSize"
+O_oo.width = 20 : O_oo.Height = 20 : O_Rd.Width = 20 : O_Rd.Height = 20 : O_Gr.Width = 20 : O_Gr.Height = 20
+O_Bl.Width = 20 : O_Bl.Height = 20 : O_Yw.width = 20 : O_Yw.Height = 20 : O_Pu.Width = 20 : O_Pu.Height = 20
+O_Tq.Width = 20 : O_Tq.Height = 20 : O_Wh.Width = 20 : O_Wh.Height = 20
+Case = "UpSize"
+O_oo.width = 36 : O_oo.Height = 12 : O_Rd.Width = 36 : O_Rd.Height = 12 : O_Gr.Width = 36 : O_Gr.Height = 12
+O_Bl.Width = 36 : O_Bl.Height = 12 : O_Yw.width = 36 : O_Yw.Height = 12 : O_Pu.Width = 36 : O_Pu.Height = 12
+O_Tq.Width = 36 : O_Tq.Height = 12 : O_Wh.Width = 36 : O_Wh.Height = 12
+End Select
+End Sub
+#End Region
+#Region "Scene Setting, Clearing, Shifting, Adding, Deleting, and Loading"
+Private Sub btnSb100_Click(sender As Object, e As RoutedEventArgs) Handles btnSb100.Click
+If TS > 100 = True Then : TS = TS - 100 : Else : TS = 1 : End If : SceneLoader()
+End Sub
+Private Sub btnSb10_Click(sender As Object, e As RoutedEventArgs) Handles btnSb10.Click
+If TS > 10 = True Then : TS = TS - 10 : Else : TS = 1 : End If : SceneLoader()
+End Sub
+Private Sub btnSb1_Click(sender As Object, e As RoutedEventArgs) Handles btnSb1.Click
+If TS > 1 = True Then : TS = TS - 1 : SceneLoader() : End If
+End Sub
+Private Sub btnSC_Click(sender As Object, e As RoutedEventArgs) Handles btnSC.Click
+LoadFlag = 2 : GridClearer()
+End Sub
+Private Sub btnSf1_Click(sender As Object, e As RoutedEventArgs) Handles btnSf1.Click
+If TS < 1000 = True Then : TS = TS + 1 : SceneLoader() : End If
+End Sub
+Private Sub btnSf10_Click(sender As Object, e As RoutedEventArgs) Handles btnSf10.Click
+If TS < 991 = True Then : TS = TS + 10 : Else : TS = 1000 : End If : SceneLoader()
+End Sub
+Private Sub btnSf100_Click(sender As Object, e As RoutedEventArgs) Handles btnSf100.Click
+If TS < 901 = True Then : TS = TS + 100 : Else : TS = 1000 : End If : SceneLoader()
+End Sub
+Private Sub GridClearer()
+For i = 1 To 5 : For j = 1 To 5 : For k = 1 To 5 : LEDdisplayer(100 * i + 10 * j + 1 * k, 0)
+If LoadFlag = 2 Then : LEDstate(0, i, j, k, TS) = 0
+LEDstate(1, i, j, k, TS) = 100 * i + 10 * j + 1 * k : End If
+Next : Next : Next : LoadFlag = 0
+End Sub
+Private Sub btnAddB_Click(sender As Object, e As RoutedEventArgs) Handles btnAddB.Click
+SceneShifter(1) : AF(1) = AF(1) + 1 : TCompDisp()
+End Sub
+Private Sub btnSDel_Click(sender As Object, e As RoutedEventArgs) Handles btnSDel.Click
+SceneShifter(0) : AF(1) = AF(1) - 1 : TCompDisp()
+End Sub
+Private Sub btnAddF_Click(sender As Object, e As RoutedEventArgs) Handles btnAddF.Click
+SceneShifter(2) : AF(1) = AF(1) + 1 : TCompDisp()
+End Sub
+Private Sub SceneShifter(ByVal Shift As Integer)
+Select Case Shift
+Case = 0 'Delete Scene
+For t = TS To 1000 : For i = 1 To 5 : For j = 1 To 5 : For k = 1 To 5 : For n = 0 To 1
+If t < 1000 Then : LEDstate(n, i, j, k, t) = LEDstate(n, i, j, k, t + 1)
+Else : LEDstate(n, i, j, k, t) = 0 : End If
+Next : Next : Next : Next : Next : SceneLoader()
+Case = 1 'Addcopy Scene Left
+For t = 1000 To TS + 1 Step -1 : For i = 1 To 5 : For j = 1 To 5 : For k = 1 To 5 : For n = 0 To 1
+LEDstate(n, i, j, k, t) = LEDstate(n, i, j, k, t - 1)
+Next : Next : Next : Next : Next : SceneLoader()
+Case = 2 'Addcopy Scene Right
+For t = 1000 To TS + 1 Step -1 : For i = 1 To 5 : For j = 1 To 5 : For k = 1 To 5 : For n = 0 To 1
+LEDstate(n, i, j, k, t) = LEDstate(n, i, j, k, t - 1)
+Next : Next : Next : Next : Next : TS = TS + 1 : SceneLoader()
+End Select
+End Sub
+Private Sub SceneLoader()
+GridClearer() : For X = 1 To 5 : For Y = 1 To 5 : For Z = 1 To 5 : LoadFlag = 1
+MapLEDstate(X, Y, Z) : Next : Next : Next : TCompDisp()
+End Sub
+#End Region
+Private Sub btnEffects_Click(sender As Object, e As RoutedEventArgs) Handles btnEffects.Click
+frIteraField.Visibility = Visibility.Collapsed : frColorCyc.Visibility = Visibility.Collapsed : frTextSequencer.Visibility = Visibility.Collapsed
+Select Case Afx
+Case = 0 : frColorCyc.Visibility = Visibility.Visible : Afx = 1
+Case = 1 : frTextSequencer.Visibility = Visibility.Visible : Afx = 2
+Case = 2 : frIteraField.Visibility = Visibility.Visible : Afx = 3
+Case = 3 : Afx = 0
+End Select : PDisp(1, 6) : PLS = 6
+End Sub
+#Region "Color Cycling"
+Private Sub btnCCL_Click(sender As Object, e As RoutedEventArgs) Handles btnCCL.Click
+If CCCi > 1 Then : CCCi = CCCi - 1 : CCDisp() : End If
+End Sub
+Private Sub btnCCM_Click(sender As Object, e As RoutedEventArgs) Handles btnCCM.Click
+If CCCm > 1 Then
+CCCm = CCCm - 1 : For k = CCCi To 30 : For j = 1 To 8 : For i = 1 To 2 : CCCL(k, i, j) = CCCL(k + 1, i, j) : Next : Next : Next
+If CCCi > CCCm Then : CCCi = CCCm : End If : CCDisp() : End If
+End Sub
+Private Sub btnCCP_Click(sender As Object, e As RoutedEventArgs) Handles btnCCP.Click
+If CCCm < 30 Then
+For k = 31 To CCCi + 1 Step -1 : For j = 1 To 8 : For i = 1 To 2 : CCCL(k, i, j) = CCCL(k - 1, i, j) : Next : Next : Next
+CCCm = CCCm + 1 : CCCi = CCCi + 1 : CCDisp() : End If
+End Sub
+Private Sub btnCCR_Click(sender As Object, e As RoutedEventArgs) Handles btnCCR.Click
+If CCCi < CCCm Then : CCCi = CCCi + 1 : CCDisp() : End If
+End Sub
+Private Sub CCDisp()
+txtColCycs.Text = CCCi & "/" & CCCm
+For j = 1 To 9 : If CCCi > 1 Then : CCCL(CCCi, 1, j) = CCCL(CCCi - 1, 2, j) : Else : CCCL(CCCi, 1, j) = j + 1 : End If
+CCCL(1, 1, 8) = 10 : CCyc = CCCL(CCCi, 1, j) - 1 : CCycA(1, j) : CCyc = CCCL(CCCi, 2, j) - 1 : CCycA(2, j) : Next
+End Sub
+Private Sub btnRedCyc_Click(sender As Object, e As RoutedEventArgs) Handles btnRedCyc.Click
+CCycA1(2, 1)
+End Sub
+Private Sub btnGrnCyc_Click(sender As Object, e As RoutedEventArgs) Handles btnGrnCyc.Click
+CCycA1(2, 2)
+End Sub
+Private Sub btnBluCyc_Click(sender As Object, e As RoutedEventArgs) Handles btnBluCyc.Click
+CCycA1(2, 3)
+End Sub
+Private Sub btnTrqCyc_Click(sender As Object, e As RoutedEventArgs) Handles btnTrqCyc.Click
+CCycA1(2, 4)
+End Sub
+Private Sub btnPrpCyc_Click(sender As Object, e As RoutedEventArgs) Handles btnPrpCyc.Click
+CCycA1(2, 5)
+End Sub
+Private Sub btnYllCyc_Click(sender As Object, e As RoutedEventArgs) Handles btnYllCyc.Click
+CCycA1(2, 6)
+End Sub
+Private Sub btnWhtCyc_Click(sender As Object, e As RoutedEventArgs) Handles btnWhtCyc.Click
+CCycA1(2, 7)
+End Sub
+Private Sub btnOffCyc_Click(sender As Object, e As RoutedEventArgs) Handles btnOffCyc.Click
+CCycA1(2, 8)
+End Sub
+Private Sub CCycA1(ByVal CEio As Integer, ByVal C As Integer)
+CCyc = CCCL(CCCi, CEio, C) : CCCL(CCCi, CEio, C) = CCCL(CCCi, CEio, C) + 1 : CCycA(CEio, C)
+End Sub
+Private Sub CCycA(ByVal CEio As Integer, ByVal C As Integer)
+If CCCL(CCCi, CEio, C) = 10 Then : CCCL(CCCi, CEio, C) = 1 : End If : If CCyc = 0 Then : CCyc = 9 : End If
+Select Case CEio : Case 1 : If CCflag = 1 Then : CCyc = C : If CCyc = 8 Then : CCyc = 9 : End If : End If : Select Case C
+Case 1 : CCycB(ellRedRedN, ellRedGrnN, ellRedBluN, ellRedTrqN, ellRedPrpN, ellRedYllN, ellRedWhtN, ellRedOffN, ellRedRNDN, CCyc)
+Case 2 : CCycB(ellGrnRedN, ellGrnGrnN, ellGrnBluN, ellGrnTrqN, ellGrnPrpN, ellGrnYllN, ellGrnWhtN, ellGrnOffN, ellGrnRNDN, CCyc)
+Case 3 : CCycB(ellBluRedN, ellBluGrnN, ellBluBluN, ellBluTrqN, ellBluPrpN, ellBluYllN, ellBluWhtN, ellBluOffN, ellBluRNDN, CCyc)
+Case 4 : CCycB(ellTrqRedN, ellTrqGrnN, ellTrqBluN, ellTrqTrqN, ellTrqPrpN, ellTrqYllN, ellTrqWhtN, ellTrqOffN, ellTrqRNDN, CCyc)
+Case 5 : CCycB(ellPrpRedN, ellPrpGrnN, ellPrpBluN, ellPrpTrqN, ellPrpPrpN, ellPrpYllN, ellPrpWhtN, ellPrpOffN, ellPrpRNDN, CCyc)
+Case 6 : CCycB(ellYllRedN, ellYllGrnN, ellYllBluN, ellYllTrqN, ellYllPrpN, ellYllYllN, ellYllWhtN, ellYllOffN, ellYllRNDN, CCyc)
+Case 7 : CCycB(ellWhtRedN, ellWhtGrnN, ellWhtBluN, ellWhtTrqN, ellWhtPrpN, ellWhtYllN, ellWhtWhtN, ellWhtOffN, ellWhtRNDN, CCyc)
+Case 8 : CCycB(ellOffRedN, ellOffGrnN, ellOffBluN, ellOffTrqN, ellOffPrpN, ellOffYllN, ellOffWhtN, ellOffOffN, ellOffRNDN, CCyc)
+End Select : Case 2 : Select Case C
+Case 1 : CCycB(ellRedRedO, ellRedGrnO, ellRedBluO, ellRedTrqO, ellRedPrpO, ellRedYllO, ellRedWhtO, ellRedOffO, ellRedRNDO, CCyc)
+Case 2 : CCycB(ellGrnRedO, ellGrnGrnO, ellGrnBluO, ellGrnTrqO, ellGrnPrpO, ellGrnYllO, ellGrnWhtO, ellGrnOffO, ellGrnRNDO, CCyc)
+Case 3 : CCycB(ellBluRedO, ellBluGrnO, ellBluBluO, ellBluTrqO, ellBluPrpO, ellBluYllO, ellBluWhtO, ellBluOffO, ellBluRNDO, CCyc)
+Case 4 : CCycB(ellTrqRedO, ellTrqGrnO, ellTrqBluO, ellTrqTrqO, ellTrqPrpO, ellTrqYllO, ellTrqWhtO, ellTrqOffO, ellTrqRNDO, CCyc)
+Case 5 : CCycB(ellPrpRedO, ellPrpGrnO, ellPrpBluO, ellPrpTrqO, ellPrpPrpO, ellPrpYllO, ellPrpWhtO, ellPrpOffO, ellPrpRNDO, CCyc)
+Case 6 : CCycB(ellYllRedO, ellYllGrnO, ellYllBluO, ellYllTrqO, ellYllPrpO, ellYllYllO, ellYllWhtO, ellYllOffO, ellYllRNDO, CCyc)
+Case 7 : CCycB(ellWhtRedO, ellWhtGrnO, ellWhtBluO, ellWhtTrqO, ellWhtPrpO, ellWhtYllO, ellWhtWhtO, ellWhtOffO, ellWhtRNDO, CCyc)
+Case 8 : CCycB(ellOffRedO, ellOffGrnO, ellOffBluO, ellOffTrqO, ellOffPrpO, ellOffYllO, ellOffWhtO, ellOffOffO, ellOffRNDO, CCyc)
+End Select : End Select
+End Sub
+Private Sub CCycB(ByVal CRed As Object, ByVal CGrn As Object, ByVal CBlu As Object, ByVal CTrq As Object, ByVal CPrp As Object,
+ByVal CYll As Object, ByVal CWht As Object, ByVal COff As Object, ByVal CRnd As Object, ByVal CC As Integer)
+CRed.Opacity = 0 : CGrn.Opacity = 0 : CBlu.Opacity = 0 : CTrq.Opacity = 0 : CPrp.Opacity = 0
+CYll.Opacity = 0 : CWht.Opacity = 0 : COff.Opacity = 0 : CRnd.Opacity = 0
+Select Case CC : Case 1 : CRed.Opacity = 1 : Case 2 : CGrn.Opacity = 1 : Case 3 : CBlu.Opacity = 1
+Case 4 : CTrq.Opacity = 1 : Case 5 : CPrp.Opacity = 1 : Case 6 : CYll.Opacity = 1
+Case 7 : CWht.Opacity = 1 : Case 8 : CRnd.Opacity = 1 : Case 9 : COff.Opacity = 1 : End Select
+End Sub
+Sub ViewCC(ByVal Sender As Object, ByVal e As RoutedEventArgs)
+Try : CCflag = 1 : btnViewCC.Interval = 500 : If CCCi < CCCm Then : CCCi = CCCi + 1 : Else : CCCi = 1 : End If : CCDisp() : CCflag = 0 : Catch ex As Exception : End Try
+End Sub
+Sub btnColCyc_Click(ByVal Sender As Object, ByVal e As RoutedEventArgs) Handles btnColCyc.Click
+For i = 1 To CCCm : SceneShifter(1) : AF(1) = AF(1) + 1 : TCompDisp() : Next
+For n = 1 To CCCm : TS = TS + 1 : For i = 1 To 5 : For j = 1 To 5 : For k = 1 To 5
+Try : LC = LEDstate(0, i, j, k, TS) : If LC = 0 Then : LC = 8 : End If
+LEDstate(0, i, j, k, TS) = CCCL(n, 2, LC) - 1
+LEDColor = LEDstate(0, i, j, k, TS) : LEDNumber = LEDstate(1, i, j, k, TS)
+If LEDColor = 8 Then : LEDstate(0, i, j, k, TS) = rn.Next(1, 8) : LEDColor = LEDstate(0, i, j, k, TS) : End If
+LEDdisplayer(LEDNumber, LEDColor) : Catch : End Try
+Next : Next : Next : SceneLoader() : Next
+End Sub
+#End Region
+#Region "Letter Sequencing"
+'SEQUENCER OPTION BUTTONS
+Private Sub btnColB_Click(sender As Object, e As RoutedEventArgs) Handles btnColB.Click
+EllMoveA(6, "B")
+End Sub
+Private Sub btnColF_Click(sender As Object, e As RoutedEventArgs) Handles btnColF.Click
+EllMoveA(6, "F")
+End Sub
+Private Sub btnRefB_Click(sender As Object, e As RoutedEventArgs) Handles btnRefB.Click
+EllMoveA(5, "B")
+End Sub
+Private Sub btnRefF_Click(sender As Object, e As RoutedEventArgs) Handles btnRefF.Click
+EllMoveA(5, "F")
+End Sub
+Private Sub btnRotB_Click(sender As Object, e As RoutedEventArgs) Handles btnRotB.Click
+EllMoveA(4, "B")
+End Sub
+Private Sub btnRotF_Click(sender As Object, e As RoutedEventArgs) Handles btnRotF.Click
+EllMoveA(4, "F")
+End Sub
+Private Sub btnThckiB_Click(sender As Object, e As RoutedEventArgs) Handles btnThickB.Click
+EllMoveA(3, "B")
+End Sub
+Private Sub btnThickF_Click(sender As Object, e As RoutedEventArgs) Handles btnThickF.Click
+EllMoveA(3, "F")
+End Sub
+Private Sub btnPlaneB_Click(sender As Object, e As RoutedEventArgs) Handles btnPlaneB.Click
+EllMoveA(2, "B")
+End Sub
+Private Sub btnPlaneF_Click(sender As Object, e As RoutedEventArgs) Handles btnPlaneF.Click
+EllMoveA(2, "F")
+End Sub
+Private Sub btnOriB_Click(sender As Object, e As RoutedEventArgs) Handles btnOriB.Click
+EllMoveA(1, "B")
+End Sub
+Private Sub btnOriF_Click(sender As Object, e As RoutedEventArgs) Handles btnOriF.Click
+EllMoveA(1, "F")
+End Sub
+'Ellipse Option Selector
+Private Sub EllMoveA(ByVal Ell As Integer, ByVal BF As String)
+Select Case BF 'Backwards/Forwards
+Case "B" : OPTRRC(LSeq, LScrni, Ell) = OPTRRC(LSeq, LScrni, Ell) - 1
+If OPTRRC(LSeq, LScrni, Ell) = 0 Then : OPTRRC(LSeq, LScrni, Ell) = Emm(Ell - 1) : End If
+Case "F" : OPTRRC(LSeq, LScrni, Ell) = OPTRRC(LSeq, LScrni, Ell) + 1
+If OPTRRC(LSeq, LScrni, Ell) = Emm(Ell - 1) + 1 Then : OPTRRC(LSeq, LScrni, Ell) = 1 : End If
+End Select : EllMoveB(Ell, OPTRRC(LSeq, LScrni, Ell), EllArr(Ell - 1))
+End Sub
+Private Sub EllMoveB(ByVal ElValue As Integer, ByVal elPos As Integer, ByVal Elli As Object)
+Select Case ElValue 'Values
+Case = 6 : Select Case elPos 'Color
+Case 1 : MB(92, 42, "Red") : Case 2 : MB(67, 45, "Green") : Case 3 : MB(45, 53, "Blue") : Case 4 : MB(67, 61, "Trqs") : Case 5 : MB(92, 62, "Prpl")
+Case 6 : MB(117, 61, "Yllw") : Case 7 : MB(142, 53, "White") : Case 8 : MB(117, 45, "Clear") : Case 9 : MB(92, 52, "Wild") : End Select
+Case = 5 : Select Case elPos 'Reflection
+Case 1 : MB(45, 93, "X") : Case 2 : MB(142, 93, "O") : End Select
+Case = 4 : Select Case elPos 'Rotation
+Case 1 : MB(92, 123, "0") : Case 2 : MB(45, 133, "90") : Case 3 : MB(92, 142, "180") : Case 4 : MB(142, 133, "270") : End Select
+Case = 3 : Select Case elPos 'Thickness
+Case 1 : MB(92, 163, "1") : Case 2 : MB(54, 167, "2") : Case 3 : MB(72, 181, "3") : Case 4 : MB(112, 181, "4") : Case 5 : MB(132, 167, "5") : End Select
+Case = 2 : Select Case elPos 'Plane
+Case 1 : MB(92, 203, "1") : Case 2 : MB(58, 206, "2") : Case 3 : MB(58, 219, "3") : Case 4 : MB(92, 222, "4")
+Case 5 : MB(128, 219, "5") : Case 6 : MB(128, 206, "0") : End Select
+Case = 1 : Select Case elPos 'Orientation
+Case 1 : MB(92, 243, "x") : Case 2 : MB(58, 259, "y") : Case 3 : MB(128, 259, "z") : End Select
+End Select : Elli.Margin = elLoc : tbArr(ElValue - 1).Text = EllStr
+End Sub
+Private Sub MB(ByVal Xpos As Integer, ByVal Ypos As Integer, ByVal ES As String)
+elLoc = New Thickness(Xpos, Ypos, 0, 0) : EllStr = ES
+End Sub
+'Sequencing Frames
+Private Sub btnLFrmSeq_Click(sender As Object, e As RoutedEventArgs) Handles btnLFrmSeq.Click
+If LScrni > 1 Then : LScrni = LScrni - 1 : End If : PermDis()
+End Sub
+Private Sub btnDelFrmSeq_Click(sender As Object, e As RoutedEventArgs) Handles btnDelFrmSeq.Click
+If LScrnf(LSeq) > 1 Then : For i = LScrni To LScrnf(LSeq) - 1 : For j = 1 To 6 : OPTRRC(LSeq, i, j) = OPTRRC(LSeq, i + 1, j) : Next : Next
+For j = 1 To 6 : OPTRRC(LSeq, LScrnf(LSeq), j) = 1 : Next : LScrnf(LSeq) = LScrnf(LSeq) - 1 : End If
+If LScrni > LScrnf(LSeq) Then : LScrni = LScrnf(LSeq) : End If
+PermDis()
+End Sub
+Private Sub btnAddFrmSeq_Click(sender As Object, e As RoutedEventArgs) Handles btnAddFrmSeq.Click
+If LScrnf(LSeq) + 1 < 25 Then : LScrnf(LSeq) = LScrnf(LSeq) + 1 : For i = LScrnf(LSeq) + 1 To LScrni + 1 Step -1
+For j = 1 To 6 : OPTRRC(LSeq, i, j) = OPTRRC(LSeq, i - 1, j) : Next : Next : LScrni = LScrni + 1 : End If : PermDis()
+End Sub
+Private Sub btnRFrmSeq_Click(sender As Object, e As RoutedEventArgs) Handles btnRFrmSeq.Click
+If LScrni < LScrnf(LSeq) Then : LScrni = LScrni + 1 : End If : PermDis()
+End Sub
+'Sequencing Characters
+Private Sub btnLCharSeq_Click(sender As Object, e As RoutedEventArgs) Handles btnLCharSeq.Click
+If LSeq > 1 Then : LSeq = LSeq - 1 : LScrni = 1 : End If : PermDis()
+End Sub
+Private Sub btnDelCharSeq_Click(sender As Object, e As RoutedEventArgs) Handles btnDelCharSeq.Click
+If LSeqf > 1 Then : For i = LSeq To LSeqf - 1 : LScrnf(i) = LScrnf(i + 1) : Next : LScrnf(LSeqf) = 0 : LSeqf = LSeqf - 1
+For k = LSeq To LSeqf : For i = 1 To LScrnf(k) : For j = 1 To 6 : OPTRRC(k, i, j) = OPTRRC(k + 1, i, j) : Next : Next : Next
+If LSeq > LSeqf Then : LSeq = LSeqf : End If : LScrni = 1 : PermDis() : End If
+End Sub
+Private Sub btnAddCharSeq_Click(sender As Object, e As RoutedEventArgs) Handles btnAddCharSeq.Click
+If LSeqf + 1 < 30 Then : LSeqf = LSeqf + 1 : For k = LSeqf To LSeq + 1 Step -1 : For i = 1 To LScrnf(LSeq) : For J = 1 To 6
+OPTRRC(k, i, J) = OPTRRC(k - 1, i, J) : Next : Next : Next
+LSeq = LSeq + 1 : LScrnf(LSeq) = 1 : LScrni = 1 : End If : PermDis()
+End Sub
+Private Sub btnRCharSeq_Click(sender As Object, e As RoutedEventArgs) Handles btnRCharSeq.Click
+If LSeq < LSeqf Then : LSeq = LSeq + 1 : LScrni = 1 : End If : PermDis()
+End Sub
+Private Sub PermDis()
+For i = 1 To 6 : EllMoveB(i, OPTRRC(LSeq, LScrni, i), EllArr(i - 1)) : Next
+tbFrmSeq.Text = CStr(LScrni) & "/" & CStr(LScrnf(LSeq))
+tbCharSeq.Text = CStr(LSeq) & "/" & CStr(LSeqf)
+End Sub
+'Firing Sequencer
+Private Sub btnSetSeq_Click(sender As Object, e As RoutedEventArgs) Handles btnSetSeq.Click
+SeqLoop = 1
+For j = 1 To LSeqf : For i = 1 To LScrnf(j) : LS = txtSequence.Text.Substring(SeqLoop - 1, 1)
+GridCleaner() : FireSeqA(LS, i, j) : Next : SeqLoop = SeqLoop + 1
+If SeqLoop = txtSequence.Text.Length + 1 Then : Exit Sub : End If
+If j = LSeqf Then : j = 0 : End If
+Next
+End Sub
+Private Sub GridCleaner()
+If OwIn = 1 Then : For i = 1 To 5 : For j = 1 To 5 : For k = 1 To 5 : LEDdisplayer(100 * i + 10 * j + 1 * k, 0)
+LEDstate(0, i, j, k, TS) = 0 : LEDstate(1, i, j, k, TS) = 0 : Next : Next : Next : End If
+End Sub
+Private Sub FireSeqA(ByVal Letter As String, ByVal i As Integer, ByVal j As Integer)
+Select Case Letter
+Case "A" : Lt(0, 0) : Case "B" : Lt(0, 1) : Case "C" : Lt(0, 2) : Case "D" : Lt(0, 3) : Case "E" : Lt(0, 4)
+Case "F" : Lt(0, 5) : Case "G" : Lt(0, 6) : Case "H" : Lt(0, 7) : Case "I" : Lt(0, 8) : Case "J" : Lt(0, 9)
+Case "K" : Lt(1, 0) : Case "L" : Lt(1, 1) : Case "M" : Lt(1, 2) : Case "N" : Lt(1, 3) : Case "O" : Lt(1, 4)
+Case "P" : Lt(1, 5) : Case "Q" : Lt(1, 6) : Case "R" : Lt(1, 7) : Case "S" : Lt(1, 8) : Case "T" : Lt(1, 9)
+Case "U" : Lt(2, 0) : Case "V" : Lt(2, 1) : Case "W" : Lt(2, 2) : Case "X" : Lt(2, 3) : Case "Y" : Lt(2, 4)
+Case "Z" : Lt(2, 5) : Case "0" : Lt(2, 6) : Case "1" : Lt(2, 7) : Case "2" : Lt(2, 8) : Case "3" : Lt(2, 9)
+Case "4" : Lt(3, 0) : Case "5" : Lt(3, 1) : Case "6" : Lt(3, 2) : Case "7" : Lt(3, 3) : Case "8" : Lt(3, 4)
+Case "9" : Lt(3, 5) : Case "a" : Lt(3, 6) : Case "b" : Lt(3, 7) : Case "c" : Lt(3, 8) : Case "d" : Lt(3, 9)
+Case "e" : Lt(4, 0) : Case "f" : Lt(4, 1) : Case "g" : Lt(4, 2) : Case "h" : Lt(4, 3) : Case "i" : Lt(4, 4)
+Case "j" : Lt(4, 5) : Case "k" : Lt(4, 6) : Case "l" : Lt(4, 7) : Case "m" : Lt(4, 8) : Case "n" : Lt(4, 9)
+Case "o" : Lt(5, 0) : Case "p" : Lt(5, 1) : Case "q" : Lt(5, 2) : Case "r" : Lt(5, 3) : Case "s" : Lt(5, 4)
+Case "t" : Lt(5, 5) : Case "u" : Lt(5, 6) : Case "v" : Lt(5, 7) : Case "w" : Lt(5, 8) : Case "x" : Lt(5, 9)
+Case "y" : Lt(6, 0) : Case "z" : Lt(6, 1) : Case "!" : Lt(6, 2) : Case "#" : Lt(6, 3) : Case "$" : Lt(6, 4)
+Case "%" : Lt(6, 5) : Case "^" : Lt(6, 6) : Case "." : Lt(6, 7) : Case ":" : Lt(6, 8) : Case "?" : Lt(6, 9)
+Case " " : Lt(7, 0) : End Select
+FireSeqB(LetX, LetY, OPTRRC(j, i, 1), OPTRRC(j, i, 2), OPTRRC(j, i, 3), OPTRRC(j, i, 4), OPTRRC(j, i, 5), OPTRRC(j, i, 6))
+SceneLoader() : SceneShifter(2) : AF(1) = AF(1) + 1 : TCompDisp()
+End Sub
+Private Sub Lt(ByVal R, C)
+LetX = R : LetY = C
+End Sub
+Private Sub FireSeqB(ByVal A0, A1, A2, A3, A4, A5, A6, A7)
+'A0 - ROW ... A1 - COLUMN
+'{{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J"},
+'{"K", "L", "M", "N", "O", "P", "Q", "R", "S", "T"},
+'{"U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3"},
+'{"4", "5", "6", "7", "8", "9", "a", "b", "c", "d"},
+'{"e", "f", "g", "h", "i", "j", "k", "l", "m", "n"},
+'{"o", "p", "q", "r", "s", "t", "u", "v", "w", "x"},
+'{"y", "z", "!", "#", "$", "%", "^", ".", ":", "?"}}
+'A2 - x/y/z, Orientation 'A3 - 1/2/3/4/5/0, Plane 'A4 - 1/2/3/4/5, Thickness 'A5 - 0/1/2/3, Rotation 'A6 - 0/1, Reflection
+'A7 - red1/green2/blue3/turquiose4/purple5/yellow6/white7/off8/wild9
+Try : If A6 = 2 Then : A5 = 8 - A5 : Else : A5 = A5 : End If : If A7 < 9 Then : WC = 0 : Else : WC = 1 : End If
+For Q As Integer = 0 To 24 : RLCode(Q) = Lcode(10 * A0 + A1, aQRP(A5 - 1, Q) - 1) : Next
+For T = 0 To A4 - 1 : For i = 1 To 5 : For j = 1 To 5
+If WC = 0 Then : wlc = A7 : Else : wlc = rn.Next(1, 8) : End If
+Try : Select Case A2
+Case = 1 'x
+LEDstate(0, A3 - T, i, j, TS) = wlc * RLCode(i + 5 * j - 6)
+LEDstate(1, A3 - T, i, j, TS) = j + i * 10 + (A3 - T) * 100
+Case = 2 'y
+LEDstate(0, i, A3 - T, j, TS) = wlc * RLCode(i + 5 * j - 6)
+LEDstate(1, i, A3 - T, j, TS) = j + (A3 - T) * 10 + i * 100
+Case = 3 'z
+LEDstate(0, i, 6 - j, 6 - A3 + T, TS) = wlc * RLCode(i + 5 * j - 6)
+LEDstate(1, i, 6 - j, 6 - (A3 - T), TS) = (6 - A3 + T) + (6 - j) * 10 + i * 100
+End Select : Catch : End Try : Next : Next : Next : Catch : End Try
+End Sub
+#End Region
+#Region "Iterating Motion Fields"
+Private Sub btnPreCst_Click(sender As Object, e As RoutedEventArgs) Handles btnPreCst.Click
+frCsITFld.Visibility = Visibility.Collapsed : frPrITFld.Visibility = Visibility.Collapsed
+Select Case PreCst
+Case 0 : PreCst = 1 : frPrITFld.Visibility = Visibility.Visible : btnPreCst.Content = "P" : txtPreCst.Text = "Preset Fields:"
+Case 1 : PreCst = 0 : frCsITFld.Visibility = Visibility.Visible : btnPreCst.Content = "C" : txtPreCst.Text = "Custom Fields:"
+End Select
+End Sub
+'ITFD(3,126,126,126) => ITERATION FIELD MATRIX
+'IFD(3) = {{A,B,C}} => Parameters of the ITFD Matrix
+'ITFD(0,0,0,0) => #Scenes in Iteration Field (1-125)
+'IFD(0) : A => Current Scene in Iteration Field (1-125)
+Private Sub btnItFdScneB_Click(sender As Object, e As RoutedEventArgs) Handles btnItFdScneB.Click
+If IFD(0) > 1 Then : IFD(0) = IFD(0) - 1 : IFD(1) = ITFD(0, IFD(0), 0, 0) : IFD(2) = ITFD(0, IFD(0), IFD(1), 0) : End If : FDisplay()
+End Sub
+Private Sub btnItFdScneM_Click(sender As Object, e As RoutedEventArgs) Handles btnItFdScneM.Click
+If ITFD(0, 0, 0, 0) > 1 Then : ITFD(0, 0, 0, 0) = ITFD(0, 0, 0, 0) - 1 : IFD(1) = 1 : IFD(2) = 1
+If IFD(0) > ITFD(0, 0, 0, 0) Then : IFD(0) = ITFD(0, 0, 0, 0) : End If : End If
+FDisplay()
+End Sub
+Private Sub btnItFdScneP_Click(sender As Object, e As RoutedEventArgs) Handles btnItFdScneP.Click
+ITFD(0, 0, 0, 0) = ITFD(0, 0, 0, 0) + 1 : IFD(0) = IFD(0) + 1 : IFD(1) = 1 : IFD(2) = 1 : FDisplay()
+End Sub
+Private Sub btnItFdScneF_Click(sender As Object, e As RoutedEventArgs) Handles btnItFdScneF.Click
+If IFD(0) < ITFD(0, 0, 0, 0) Then : IFD(0) = IFD(0) + 1 : IFD(1) = 1 : IFD(2) = ITFD(0, IFD(0), IFD(1), 0) : End If : FDisplay()
+End Sub
+'ITFD(0,A,0,0) => #Steps in Scene A (1-125)
+'IFD(1) : B => Current Step in Scene A (1-125)
+Private Sub btnItFdStepB_Click(sender As Object, e As RoutedEventArgs) Handles btnItFdStepB.Click
+If IFD(1) > 1 Then : IFD(1) = IFD(1) - 1 : IFD(2) = ITFD(0, IFD(0), IFD(1), 0) : End If : FDisplay()
+End Sub
+Private Sub btnItFdStepM_Click(sender As Object, e As RoutedEventArgs) Handles btnItFdStepM.Click
+If ITFD(0, IFD(0), 0, 0) > 1 Then : ITFD(0, IFD(0), 0, 0) = ITFD(0, IFD(0), 0, 0) - 1 : IFD(2) = 1
+If IFD(1) > ITFD(0, IFD(0), 0, 0) Then : IFD(1) = ITFD(0, IFD(0), 0, 0) : End If : End If
+FDisplay()
+End Sub
+Private Sub btnItFdStepP_Click(sender As Object, e As RoutedEventArgs) Handles btnItFdStepP.Click
+ITFD(0, IFD(0), 0, 0) = ITFD(0, IFD(0), 0, 0) + 1 : IFD(1) = IFD(1) + 1 : IFD(2) = 1
+ITFD(0, IFD(0), IFD(1), 0) = 1
+For L = 0 To 3 : ITFD(4, IFD(0), IFD(1), L) = ITFD(4, IFD(0), IFD(1) - 1, L) : Next
+cboOperation.SelectedIndex = ITFD(4, IFD(0), IFD(1), 0) - 1
+For K = 1 To ITFD(0, IFD(0), IFD(1), 0) : rectArrI(K - 1).visibility = Visibility.Collapsed : Next
+FDisplay()
+End Sub
+Private Sub btnItFdStepF_Click(sender As Object, e As RoutedEventArgs) Handles btnItFdStepF.Click
+If IFD(1) < ITFD(0, IFD(0), 0, 0) Then : IFD(1) = IFD(1) + 1 : IFD(2) = 1 : End If : FDisplay()
+End Sub
+'ITFD(0,A,B,0) => #Regional Points in Scene A, Step B (1-125)
+'IFD(2) : C => Current Regional Point in Scene A, Step B (1-125)
+Private Sub btnItFdRgnB_Click(sender As Object, e As RoutedEventArgs) Handles btnItFdRgnB.Click
+If IFD(2) > 1 Then : IFD(2) = IFD(2) - 1 : End If : FDisplay()
+End Sub
+Private Sub btnItFdRgnM_Click(sender As Object, e As RoutedEventArgs) Handles btnItFdRgnM.Click
+If ITFD(0, IFD(0), IFD(1), 0) > 1 Then : ITFD(0, IFD(0), IFD(1), 0) = ITFD(0, IFD(0), IFD(1), 0) - 1
+If IFD(2) > ITFD(0, IFD(0), IFD(1), 0) Then : IFD(2) = ITFD(0, IFD(0), IFD(1), 0) : End If : End If
+FDisplay()
+End Sub
+Private Sub btnItFdRgnP_Click(sender As Object, e As RoutedEventArgs) Handles btnItFdRgnP.Click
+ITFD(0, IFD(0), IFD(1), 0) = ITFD(0, IFD(0), IFD(1), 0) + 1 : IFD(2) = IFD(2) + 1 : FDisplay()
+End Sub
+Private Sub btnItFdRgnF_Click(sender As Object, e As RoutedEventArgs) Handles btnItFdRgnF.Click
+If IFD(2) < ITFD(0, IFD(0), IFD(1), 0) Then : IFD(2) = IFD(2) + 1 : End If : FDisplay()
+End Sub
+'ITFD(0,A,B,C) => LEDnumbers for Regional Points in Scene A, Step B
+'ITFD(1,A,B,C) => X
+Private Sub btnPtXUp_Click(sender As Object, e As RoutedEventArgs) Handles btnPtXUp.Click
+If ITFD(1, IFD(0), IFD(1), IFD(2)) < 5 Then
+ITFD(1, IFD(0), IFD(1), IFD(2)) = ITFD(1, IFD(0), IFD(1), IFD(2)) + 1 : End If
+FDisplay()
+End Sub
+Private Sub btnPtXdn_Click(sender As Object, e As RoutedEventArgs) Handles btnPtXdn.Click
+If ITFD(1, IFD(0), IFD(1), IFD(2)) > 1 Then
+ITFD(1, IFD(0), IFD(1), IFD(2)) = ITFD(1, IFD(0), IFD(1), IFD(2)) - 1 : End If
+FDisplay()
+End Sub
+'ITFD(2,A,B,C) => Y
+Private Sub btnPtYUp_Click(sender As Object, e As RoutedEventArgs) Handles btnPtYup.Click
+If ITFD(2, IFD(0), IFD(1), IFD(2)) < 5 Then
+ITFD(2, IFD(0), IFD(1), IFD(2)) = ITFD(2, IFD(0), IFD(1), IFD(2)) + 1 : End If
+FDisplay()
+End Sub
+Private Sub btnPtYdn_Click(sender As Object, e As RoutedEventArgs) Handles btnPtYdn.Click
+If ITFD(2, IFD(0), IFD(1), IFD(2)) > 1 Then
+ITFD(2, IFD(0), IFD(1), IFD(2)) = ITFD(2, IFD(0), IFD(1), IFD(2)) - 1 : End If
+FDisplay()
+End Sub
+'ITFD(3,A,B,C) => Z
+Private Sub btnPtZUp_Click(sender As Object, e As RoutedEventArgs) Handles btnPtZup.Click
+If ITFD(3, IFD(0), IFD(1), IFD(2)) < 5 Then
+ITFD(3, IFD(0), IFD(1), IFD(2)) = ITFD(3, IFD(0), IFD(1), IFD(2)) + 1 : End If
+FDisplay()
+End Sub
+Private Sub btnPtZdn_Click(sender As Object, e As RoutedEventArgs) Handles btnPtZdn.Click
+If ITFD(3, IFD(0), IFD(1), IFD(2)) > 1 Then
+ITFD(3, IFD(0), IFD(1), IFD(2)) = ITFD(3, IFD(0), IFD(1), IFD(2)) - 1 : End If
+FDisplay()
+End Sub
+Private Sub FDisplay()
+If ITFD(1, IFD(0), IFD(1), IFD(2)) * ITFD(2, IFD(0), IFD(1), IFD(2)) * ITFD(3, IFD(0), IFD(1), IFD(2)) = 0 Then
+For L = 1 To 3 : If IFD(2) = 1 Then : ITFD(L, IFD(0), IFD(1), IFD(2)) = 1 : Else : ITFD(L, IFD(0), IFD(1), IFD(2)) = ITFD(L, IFD(0), IFD(1), IFD(2) - 1) : End If : Next : End If
+ITFD(0, IFD(0), IFD(1), IFD(2)) = ITFD(1, IFD(0), IFD(1), IFD(2)) * 100 + ITFD(2, IFD(0), IFD(1), IFD(2)) * 10 + ITFD(3, IFD(0), IFD(1), IFD(2)) * 1
+txtPtX.Text = ITFD(1, IFD(0), IFD(1), IFD(2)) : txtPtY.Text = ITFD(2, IFD(0), IFD(1), IFD(2)) : txtPtZ.Text = ITFD(3, IFD(0), IFD(1), IFD(2))
+cboOperation.SelectedIndex = ITFD(4, IFD(0), IFD(1), 0) - 1
+txtPtXv.Text = ITFD(4, IFD(0), IFD(1), 1) : If txtPtXv.Text = 999 Then : txtPtXv.Text = "X" : End If
+txtPtYv.Text = ITFD(4, IFD(0), IFD(1), 2) : If txtPtYv.Text = 999 Then : txtPtYv.Text = "Y" : End If
+txtPtZv.Text = ITFD(4, IFD(0), IFD(1), 3) : If txtPtZv.Text = 999 Then : txtPtZv.Text = "Z" : End If
+For q = 0 To 124 : RP(rectArrI(q), 0, 0) : rectArrI(q).visibility = Visibility.Collapsed : Next
+For p = 1 To ITFD(0, IFD(0), IFD(1), 0) : Try : PointResolver(rectArrI(p - 1), p) : Catch : End Try : Next
+End Sub
+Private Sub PointResolver(ByVal R As Object, ByVal i As Integer)
+R.visibility = Visibility.Visible
+If i = IFD(2) Then : R.Width = 12 : R.Height = 12 : Else : R.Width = 10 : R.Width = 10 : End If
+Select Case ITFD(0, IFD(0), IFD(1), i)
+Case 111 : RP(R, 413, 451) : Case 112 : RP(R, 478, 451) : Case 113 : RP(R, 543, 451) : Case 114 : RP(R, 608, 451) : Case 115 : RP(R, 673, 451)
+Case 121 : RP(R, 443, 441) : Case 122 : RP(R, 508, 441) : Case 123 : RP(R, 573, 441) : Case 124 : RP(R, 638, 441) : Case 125 : RP(R, 703, 441)
+Case 131 : RP(R, 473, 431) : Case 132 : RP(R, 538, 431) : Case 133 : RP(R, 603, 431) : Case 134 : RP(R, 668, 431) : Case 135 : RP(R, 733, 431)
+Case 141 : RP(R, 503, 421) : Case 142 : RP(R, 568, 421) : Case 143 : RP(R, 633, 421) : Case 144 : RP(R, 698, 421) : Case 145 : RP(R, 763, 421)
+Case 151 : RP(R, 533, 411) : Case 152 : RP(R, 598, 411) : Case 153 : RP(R, 663, 411) : Case 154 : RP(R, 728, 411) : Case 155 : RP(R, 793, 411)
+Case 211 : RP(R, 413, 351) : Case 212 : RP(R, 478, 351) : Case 213 : RP(R, 543, 351) : Case 214 : RP(R, 608, 351) : Case 215 : RP(R, 673, 351)
+Case 221 : RP(R, 443, 341) : Case 222 : RP(R, 508, 341) : Case 223 : RP(R, 573, 341) : Case 224 : RP(R, 638, 341) : Case 225 : RP(R, 703, 341)
+Case 231 : RP(R, 473, 331) : Case 232 : RP(R, 538, 331) : Case 233 : RP(R, 603, 331) : Case 234 : RP(R, 668, 331) : Case 235 : RP(R, 733, 331)
+Case 241 : RP(R, 503, 321) : Case 242 : RP(R, 568, 321) : Case 243 : RP(R, 633, 321) : Case 244 : RP(R, 698, 321) : Case 245 : RP(R, 763, 321)
+Case 251 : RP(R, 533, 311) : Case 252 : RP(R, 598, 311) : Case 253 : RP(R, 663, 311) : Case 254 : RP(R, 728, 311) : Case 255 : RP(R, 793, 311)
+Case 311 : RP(R, 413, 251) : Case 312 : RP(R, 478, 251) : Case 313 : RP(R, 543, 251) : Case 314 : RP(R, 608, 251) : Case 315 : RP(R, 673, 251)
+Case 321 : RP(R, 443, 241) : Case 322 : RP(R, 508, 241) : Case 323 : RP(R, 573, 241) : Case 324 : RP(R, 638, 241) : Case 325 : RP(R, 703, 241)
+Case 331 : RP(R, 473, 231) : Case 332 : RP(R, 538, 231) : Case 333 : RP(R, 603, 231) : Case 334 : RP(R, 668, 231) : Case 335 : RP(R, 733, 231)
+Case 341 : RP(R, 503, 221) : Case 342 : RP(R, 568, 221) : Case 343 : RP(R, 633, 221) : Case 344 : RP(R, 698, 221) : Case 345 : RP(R, 763, 221)
+Case 351 : RP(R, 533, 211) : Case 352 : RP(R, 598, 211) : Case 353 : RP(R, 663, 211) : Case 354 : RP(R, 728, 211) : Case 355 : RP(R, 793, 211)
+Case 411 : RP(R, 413, 151) : Case 412 : RP(R, 478, 151) : Case 413 : RP(R, 543, 151) : Case 414 : RP(R, 608, 151) : Case 415 : RP(R, 673, 151)
+Case 421 : RP(R, 443, 141) : Case 422 : RP(R, 508, 141) : Case 423 : RP(R, 573, 141) : Case 424 : RP(R, 638, 141) : Case 425 : RP(R, 703, 141)
+Case 431 : RP(R, 473, 131) : Case 432 : RP(R, 538, 131) : Case 433 : RP(R, 603, 131) : Case 434 : RP(R, 668, 131) : Case 435 : RP(R, 733, 131)
+Case 441 : RP(R, 503, 121) : Case 442 : RP(R, 568, 121) : Case 443 : RP(R, 633, 121) : Case 444 : RP(R, 698, 121) : Case 445 : RP(R, 763, 121)
+Case 451 : RP(R, 533, 111) : Case 452 : RP(R, 598, 111) : Case 453 : RP(R, 663, 111) : Case 454 : RP(R, 728, 111) : Case 455 : RP(R, 793, 111)
+Case 511 : RP(R, 413, 51) : Case 512 : RP(R, 478, 51) : Case 513 : RP(R, 543, 51) : Case 514 : RP(R, 608, 51) : Case 515 : RP(R, 673, 51)
+Case 521 : RP(R, 443, 41) : Case 522 : RP(R, 508, 41) : Case 523 : RP(R, 573, 41) : Case 524 : RP(R, 638, 41) : Case 525 : RP(R, 703, 41)
+Case 531 : RP(R, 473, 31) : Case 532 : RP(R, 538, 31) : Case 533 : RP(R, 603, 31) : Case 534 : RP(R, 668, 31) : Case 535 : RP(R, 733, 31)
+Case 541 : RP(R, 503, 21) : Case 542 : RP(R, 568, 21) : Case 543 : RP(R, 633, 21) : Case 544 : RP(R, 698, 21) : Case 545 : RP(R, 763, 21)
+Case 551 : RP(R, 533, 11) : Case 552 : RP(R, 598, 11) : Case 553 : RP(R, 663, 11) : Case 554 : RP(R, 728, 11) : Case 555 : RP(R, 793, 11)
+End Select
+End Sub
+Private Sub RP(ByVal rect As Object, ByVal X As Double, ByVal Y As Double)
+rect.Margin = New Thickness(X, Y, 0, 0)
+End Sub
+'ITFD(4,A,B,0) => Operational Jump of Scene A, Step B (1-6)
+'(1-move, 2-copy, 3-swap) => opjumping vectors : <X,Y,Z>
+'(4-Rot90+, 5-Rot90-) => opjumping lines : <X,Y,999>, <X,999,Z>, <999,Y,Z>
+'(6-Reflect) => opjumping planes : <X,999,999>, <999,Y,999>, <999,999,Z>
+Private Sub cboOperation_SelectItem(sender As Object, e As RoutedEventArgs) Handles cboOperation.DropDownClosed
+ITFD(4, IFD(0), IFD(1), 0) = cboOperation.SelectedIndex + 1
+For i = 1 To 4 : ITFD(4, IFD(0), IFD(1), i) = 1 : Next : OJumpDisp()
+End Sub
+'ITFD(4,A,B,1) => X-value of Operational Jump for Region in Scene A, Step B
+Private Sub btnPtXVUp_Click(sender As Object, e As RoutedEventArgs) Handles btnPtXVUp.Click
+ITFD(4, IFD(0), IFD(1), 1) = ITFD(4, IFD(0), IFD(1), 1) + 1 : OJumpDisp()
+End Sub
+Private Sub btnPtXVdn_Click(sender As Object, e As RoutedEventArgs) Handles btnPtXVdn.Click
+ITFD(4, IFD(0), IFD(1), 1) = ITFD(4, IFD(0), IFD(1), 1) - 1 : OJumpDisp()
+End Sub
+'ITFD(4,A,B,2) => Y-value of Operational Jump for Region in Scene A, Step B
+Private Sub btnPtYVUp_Click(sender As Object, e As RoutedEventArgs) Handles btnPtYVup.Click
+ITFD(4, IFD(0), IFD(1), 2) = ITFD(4, IFD(0), IFD(1), 2) + 1 : OJumpDisp()
+End Sub
+Private Sub btnPtYVdn_Click(sender As Object, e As RoutedEventArgs) Handles btnPtYVdn.Click
+ITFD(4, IFD(0), IFD(1), 2) = ITFD(4, IFD(0), IFD(1), 2) - 1 : OJumpDisp()
+End Sub
+'ITFD(4,A,B,3) => Z-value of Operational Jump for Region in Scene A, Step B
+Private Sub btnPtZVUp_Click(sender As Object, e As RoutedEventArgs) Handles btnPtZVup.Click
+ITFD(4, IFD(0), IFD(1), 3) = ITFD(4, IFD(0), IFD(1), 3) + 1 : OJumpDisp()
+End Sub
+Private Sub btnPtZVdn_Click(sender As Object, e As RoutedEventArgs) Handles btnPtZVdn.Click
+ITFD(4, IFD(0), IFD(1), 3) = ITFD(4, IFD(0), IFD(1), 3) - 1 : OJumpDisp()
+End Sub
+'ITFD(4,A,B,4) => XYZ Cycler Value of Operational Jump for Region in Scene A, Step B
+Private Sub btnXYZ_Click(sender As Object, e As RoutedEventArgs) Handles btnXYZ.Click
+ITFD(4, IFD(0), IFD(1), 4) = ITFD(4, IFD(0), IFD(1), 4) + 1
+If ITFD(4, IFD(0), IFD(1), 4) > 3 Then : ITFD(4, IFD(0), IFD(1), 4) = 1 : End If
+OJumpDisp()
+End Sub
+Private Sub OJumpDisp()
+txtPtXv.Text = "-" : txtPtYv.Text = "-" : txtPtZv.Text = "-"
+Select Case ITFD(4, IFD(0), IFD(1), 0)
+Case < 4 'Move-Copy-Swap Vector Displayer
+If ITFD(4, IFD(0), IFD(1), 1) < 1 Then : ITFD(4, IFD(0), IFD(1), 1) = 1
+ElseIf ITFD(4, IFD(0), IFD(1), 1) > 5 Then : ITFD(4, IFD(0), IFD(1), 1) = 5 : End If
+If ITFD(4, IFD(0), IFD(1), 2) < 1 Then : ITFD(4, IFD(0), IFD(1), 2) = 1
+ElseIf ITFD(4, IFD(0), IFD(1), 2) > 5 Then : ITFD(4, IFD(0), IFD(1), 2) = 5 : End If
+If ITFD(4, IFD(0), IFD(1), 3) < 1 Then : ITFD(4, IFD(0), IFD(1), 3) = 1
+ElseIf ITFD(4, IFD(0), IFD(1), 3) > 5 Then : ITFD(4, IFD(0), IFD(1), 3) = 5 : End If
+txtPtXv.Text = ITFD(4, IFD(0), IFD(1), 1)
+txtPtYv.Text = ITFD(4, IFD(0), IFD(1), 2)
+txtPtZv.Text = ITFD(4, IFD(0), IFD(1), 3)
+Case < 6 '+90/-90 Rotation Line Displayer
+Select Case ITFD(4, IFD(0), IFD(1), 4)
+Case = 1 'X-Line Rotations
+If ITFD(4, IFD(0), IFD(1), 2) < 1 Or ITFD(4, IFD(0), IFD(1), 2) = 999 Then : ITFD(4, IFD(0), IFD(1), 2) = 1
+ElseIf ITFD(4, IFD(0), IFD(1), 2) > 5 Then : ITFD(4, IFD(0), IFD(1), 2) = 5 : End If
+If ITFD(4, IFD(0), IFD(1), 3) < 1 Or ITFD(4, IFD(0), IFD(1), 3) = 999 Then : ITFD(4, IFD(0), IFD(1), 3) = 1
+ElseIf ITFD(4, IFD(0), IFD(1), 3) > 5 Then : ITFD(4, IFD(0), IFD(1), 3) = 5 : End If
+ITFD(4, IFD(0), IFD(1), 1) = 999 : txtPtYv.Text = ITFD(4, IFD(0), IFD(1), 2) : txtPtZv.Text = ITFD(4, IFD(0), IFD(1), 3)
+Case = 2 'Y-Line Rotations
+If ITFD(4, IFD(0), IFD(1), 1) < 1 Or ITFD(4, IFD(0), IFD(1), 1) = 999 Then : ITFD(4, IFD(0), IFD(1), 1) = 1
+ElseIf ITFD(4, IFD(0), IFD(1), 1) > 5 Then : ITFD(4, IFD(0), IFD(1), 1) = 5 : End If
+If ITFD(4, IFD(0), IFD(1), 3) < 1 Or ITFD(4, IFD(0), IFD(1), 3) = 999 Then : ITFD(4, IFD(0), IFD(1), 3) = 1
+ElseIf ITFD(4, IFD(0), IFD(1), 3) > 5 Then : ITFD(4, IFD(0), IFD(1), 3) = 5 : End If
+ITFD(4, IFD(0), IFD(1), 2) = 999 : txtPtXv.Text = ITFD(4, IFD(0), IFD(1), 1) : txtPtZv.Text = ITFD(4, IFD(0), IFD(1), 3)
+Case = 3 'Z-Line Rotations
+If ITFD(4, IFD(0), IFD(1), 1) < 1 Or ITFD(4, IFD(0), IFD(1), 1) = 999 Then : ITFD(4, IFD(0), IFD(1), 1) = 1
+ElseIf ITFD(4, IFD(0), IFD(1), 1) > 5 Then : ITFD(4, IFD(0), IFD(1), 1) = 5 : End If
+If ITFD(4, IFD(0), IFD(1), 2) < 1 Or ITFD(4, IFD(0), IFD(1), 2) = 999 Then : ITFD(4, IFD(0), IFD(1), 2) = 1
+ElseIf ITFD(4, IFD(0), IFD(1), 2) > 5 Then : ITFD(4, IFD(0), IFD(1), 2) = 5 : End If
+ITFD(4, IFD(0), IFD(1), 3) = 999 : txtPtXv.Text = ITFD(4, IFD(0), IFD(1), 1) : txtPtYv.Text = ITFD(4, IFD(0), IFD(1), 2)
+End Select
+Case < 7 'Reflective Plane Displayer
+Select Case ITFD(4, IFD(0), IFD(1), 4)
+Case = 1 'X-Plane Reflections
+If ITFD(4, IFD(0), IFD(1), 1) < 1 Or ITFD(4, IFD(0), IFD(1), 1) = 999 Then : ITFD(4, IFD(0), IFD(1), 1) = 1
+ElseIf ITFD(4, IFD(0), IFD(1), 1) > 5 Then : ITFD(4, IFD(0), IFD(1), 1) = 5 : End If
+ITFD(4, IFD(0), IFD(1), 2) = 999 : ITFD(4, IFD(0), IFD(1), 3) = 999 : txtPtXv.Text = ITFD(4, IFD(0), IFD(1), 1)
+Case = 2 'Y-Plane Reflections
+If ITFD(4, IFD(0), IFD(1), 2) < 1 Or ITFD(4, IFD(0), IFD(1), 2) = 999 Then : ITFD(4, IFD(0), IFD(1), 2) = 1
+ElseIf ITFD(4, IFD(0), IFD(1), 2) > 5 Then : ITFD(4, IFD(0), IFD(1), 2) = 5 : End If
+ITFD(4, IFD(0), IFD(1), 1) = 999 : ITFD(4, IFD(0), IFD(1), 3) = 999 : txtPtYv.Text = ITFD(4, IFD(0), IFD(1), 2)
+Case = 3 'Z-Plane Reflections
+If ITFD(4, IFD(0), IFD(1), 3) < 1 Or ITFD(4, IFD(0), IFD(1), 3) = 999 Then : ITFD(4, IFD(0), IFD(1), 3) = 1
+ElseIf ITFD(4, IFD(0), IFD(1), 3) > 5 Then : ITFD(4, IFD(0), IFD(1), 3) = 5 : End If
+ITFD(4, IFD(0), IFD(1), 1) = 999 : ITFD(4, IFD(0), IFD(1), 2) = 999 : txtPtZv.Text = ITFD(4, IFD(0), IFD(1), 3)
+End Select
+End Select : FDisplay()
+End Sub
+'ITFD(5,A,B,0) => Dimensional Parameters of Scene A, Step B (1-8)
+'1 - looping, 0 - Flat : <xyz> => 1<000>, 2<001>, 3<010>, 4<011>, 5<100>, 6<101>, 7<110>, 8<111>
+Private Sub DimensionParam()
+ITFD(5, IFD(0), IFD(1), 0) = 4 * ITFD(5, IFD(0), IFD(1), 1) + 2 * ITFD(5, IFD(0), IFD(1), 2) + 1 * ITFD(5, IFD(0), IFD(1), 3) + 1
+FDisplay()
+End Sub
+'ITFD(5,A,B,1) => X : ITFD(5,A,B,2) => Y : ITFD(5,A,B,3) => Z
+Private Sub Xloop(sender As Object, e As RoutedEventArgs) Handles cbxXloop.Click
+If cbxXloop.IsChecked Then : ITFD(5, IFD(0), IFD(1), 1) = 1 : Else ITFD(5, IFD(0), IFD(1), 1) = 0 : End If : DimensionParam()
+End Sub
+Private Sub Yloop(sender As Object, e As RoutedEventArgs) Handles cbxYloop.Click
+If cbxYloop.IsChecked Then : ITFD(5, IFD(0), IFD(1), 2) = 1 : Else ITFD(5, IFD(0), IFD(1), 2) = 0 : End If : DimensionParam()
+End Sub
+Private Sub Zloop(sender As Object, e As RoutedEventArgs) Handles cbxZloop.Click
+If cbxZloop.IsChecked Then : ITFD(5, IFD(0), IFD(1), 3) = 1 : Else ITFD(5, IFD(0), IFD(1), 3) = 0 : End If : DimensionParam()
+End Sub
+#End Region
+#Region "Set, View, and Encode Animation"
+'Set Animation Scenes
+Private Sub btnSi_Click(sender As Object, e As RoutedEventArgs) Handles btnSi.Click
+If TS <= AF(1) Then : AF(0) = TS : TCompDisp() : End If
+End Sub
+Private Sub btnSf_Click(sender As Object, e As RoutedEventArgs) Handles btnSf.Click
+If TS >= AF(0) Then : AF(1) = TS : TCompDisp() : End If
+End Sub
+Private Sub btnNPlus_Click(sender As Object, e As RoutedEventArgs) Handles btnNPlus.Click
+If TS >= AF(0) And TS <= AF(1) Then : ScFrames(TS) = ScFrames(TS) + 1 : TCompDisp() : End If
+End Sub
+Private Sub btnNMinus_Click(sender As Object, e As RoutedEventArgs) Handles btnNMinus.Click
+If ScFrames(TS) > 1 Then : ScFrames(TS) = ScFrames(TS) - 1 : TCompDisp() : End If
+End Sub
+'Set Animation Time
+Private Sub btnTMinus5_Click(sender As Object, e As RoutedEventArgs) Handles btnTMinus5.Click
+If AnTime > 10.05 Then : AnTime = AnTime - 10 : Else AnTime = 1 : End If : TCompDisp()
+End Sub
+Private Sub btnTMinus_Click(sender As Object, e As RoutedEventArgs) Handles btnTMinus.Click
+If AnTime > 1.99 Then : AnTime = AnTime - 1.0 : Else AnTime = 1 : End If : TCompDisp()
+End Sub
+Private Sub btnTPlus5_Click(sender As Object, e As RoutedEventArgs) Handles btnTPlus5.Click
+AnTime = AnTime + 10 : TCompDisp()
+End Sub
+Private Sub btnTPlus_Click(sender As Object, e As RoutedEventArgs) Handles btnTPlus.Click
+AnTime = AnTime + 1 : TCompDisp()
+End Sub
+'Animation Viewer
+Sub ViewAnimation(ByVal Sender As Object, ByVal e As RoutedEventArgs)
+Try
+If TS + 2 > AF(1) Then : TSn = TS - AF(1) + 2 : Else : TSn = TS + 2 : End If
+btnVwAnim.Interval = ScTime(TSn) * 1000
+If TS < AF(1) Then : TS = TS + 1 : Else : TS = AF(0) : End If
+SceneLoader()
+Catch ex As Exception : End Try
+End Sub
+'Animation Encoder
+Private Sub btnEncode_Click(sender As Object, e As RoutedEventArgs) Handles btnEncode.Click
+EncAn = "if(tFlag=0){startTime=millis(); tFlag=1;}else{switch(Scene){
+"
+For Fr = AF(0) To AF(1)
+EncFr = "case '" & Fr & "' : duration=" & 1000 * ScTime(Fr) & "; endTime=startTime+duration; while(endTime>>millis())
+{"
+EncCol = "" : For cx = 1 To 5 : For cy = 1 To 5 : For cz = 1 To 5 : Select Case LEDstate(0, cx, cy, cz, Fr)
+Case Is = 0 : EncCol = ""
+Case Is = 1 : EncCol = "RED(" & cx & "," & cy & "," & cz & "); "
+Case Is = 2 : EncCol = "GRN(" & cx & "," & cy & "," & cz & "); "
+Case Is = 3 : EncCol = "BLU(" & cx & "," & cy & "," & cz & "); "
+Case Is = 4 : EncCol = "YLW(" & cx & "," & cy & "," & cz & "); "
+Case Is = 5 : EncCol = "PPL(" & cx & "," & cy & "," & cz & "); "
+Case Is = 6 : EncCol = "TRQ(" & cx & "," & cy & "," & cz & "); "
+Case Is = 7 : EncCol = "WHT(" & cx & "," & cy & "," & cz & "); "
+End Select : EncFr = EncFr & EncCol : Next : Next : Next
+EncAn = EncAn & EncFr & "}; break;
+" : Next : EncAn = EncAn & "default : Scene = 0; break; } Scene++; tFlag=0;} "
+tbxEncode.Text = EncAn
+End Sub
+#End Region
+End Class
