@@ -1599,3 +1599,59 @@ Visibility="Visible" Background="Gray" HorizontalAlignment="Left" VerticalAlignm
 <TextBlock x:Name="txtIterField" Text="Iterating Motion Fields:" Margin="85,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 <TextBox x:Name="txtIField" Margin="2,20,0,0" HorizontalAlignment="Left" Height="150" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" IsReadOnly="True"/>
 <Button x:Name="btnPreCst" Margin="0,170,0,0" Content="P" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top" Width="40"/>
+<TextBlock x:Name="txtPreCst" Margin="120,175,0,0" Text="Preset Fields:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<RelativePanel x:Name="frPrITFld" Margin="0,200,0,0" Height="170" Width="350" BorderThickness="5" BorderBrush="Black"
+Visibility="Visible" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Top"></RelativePanel>
+<RelativePanel x:Name="frCsITFld" Margin="0,200,0,0" Height="170" Width="350" BorderThickness="5" BorderBrush="Black"
+Visibility="Visible" Background="Gray" HorizontalAlignment="Left" VerticalAlignment="Top">
+<TextBlock x:Name="txtOperation" Text="Operation:" Margin="3,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<TextBlock x:Name="txtSelector" Text="Pt Select:" Margin="3,21,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<TextBlock x:Name="txtPtX" Text="-" Margin="15,75,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<TextBlock x:Name="txtPtY" Text="-" Margin="45,75,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<TextBlock x:Name="txtPtZ" Text="-" Margin="75,75,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<Button x:Name="btnPtXUp" Content="^" Margin="3,40,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnPtYup" Content="^" Margin="33,40,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnPtZup" Content="^" Margin="63,40,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnPtXdn" Content="v" Margin="3,100,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnPtYdn" Content="v" Margin="33,100,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnPtZdn" Content="v" Margin="63,100,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<TextBlock x:Name="txtPtXv" Text="-" Margin="115,75,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<TextBlock x:Name="txtPtYv" Text="-" Margin="145,75,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<TextBlock x:Name="txtPtZv" Text="-" Margin="175,75,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<ComboBox x:Name="cboOperation" Margin="80,2,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="120">
+<ComboBoxItem Content="Move"/>
+<ComboBoxItem Content="Copy"/>
+<ComboBoxItem Content="Swap"/>
+<ComboBoxItem Content="Rotate +90"/>
+<ComboBoxItem Content="Rotate -90"/>
+<ComboBoxItem Content="Reflect"/>
+<Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="95,0,-99,0" Width="100"/>
+</ComboBox>
+<Button x:Name="btnPtXVUp" Content="^" Margin="103,40,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnPtYVup" Content="^" Margin="133,40,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnPtZVup" Content="^" Margin="163,40,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnPtXVdn" Content="v" Margin="103,100,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnPtYVdn" Content="v" Margin="133,100,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnPtZVdn" Content="v" Margin="163,100,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnXYZ" Content="" Margin="193,75,0,0" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="15"/>
+<TextBlock x:Name="txtLooping" Text="Looping:" Margin="2,138,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+<CheckBox x:Name="cbxXloop" Margin="67,133,0,0" Content="X" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="120"/>
+<CheckBox x:Name="cbxYloop" Margin="115,133,0,0" Content="Y" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="120"/>
+<CheckBox x:Name="cbxZloop" Margin="160,133,0,0" Content="Z" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="120"/>
+<Button x:Name="btnItFdRgnB" Content="(" Margin="210, 5,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="33"/>
+<Button x:Name="btnItFdRgnM" Content="-" Margin="243, 5,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnItFdRgnP" Content="+" Margin="273, 5,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnItFdRgnF" Content=")" Margin="303, 5,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="33"/>
+<Button x:Name="btnItFdStepB" Content="((" Margin="210,45,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="33"/>
+<Button x:Name="btnItFdStepM" Content="-" Margin="243,45,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnItFdStepP" Content="+" Margin="273,45,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnItFdStepF" Content="))" Margin="303,45,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="33"/>
+<Button x:Name="btnItFdScneB" Content="(((" Margin="210,85,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="33"/>
+<Button x:Name="btnItFdScneM" Content="-" Margin="243,85,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnItFdScneP" Content="+" Margin="273,85,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="30"/>
+<Button x:Name="btnItFdScneF" Content=")))" Margin="303,85,0,0" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="33"/>
+<Button x:Name="btnCI" Content="[[[ [[ [: : : : :] ]] ]]]" Margin="210,122,0,0" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="126"/>
+</RelativePanel>
+</RelativePanel>
+</Grid>
+</Page>
